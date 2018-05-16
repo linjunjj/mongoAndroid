@@ -1,7 +1,9 @@
 package com.linjun.net
 
 import android.util.Log
+import com.linjun.MyApp
 import com.linjun.bean.Constants
+import com.linjun.utils.isConnected
 import okhttp3.CacheControl
 import okhttp3.Interceptor
 import okhttp3.Request
