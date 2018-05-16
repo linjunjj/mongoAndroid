@@ -3,6 +3,7 @@ package com.linjun.ui.listener
 import android.os.Bundle
 import android.view.View
 import com.linjun.component.ApplicationComponent
+import com.linjun.widget.SimpleMultiStateView
 
 interface IBase{
     /**
