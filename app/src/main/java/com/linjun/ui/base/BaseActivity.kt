@@ -11,6 +11,7 @@ import com.linjun.MyApp
 import com.linjun.mongoandroid.R
 import com.linjun.ui.listener.IBase
 import com.linjun.utils.StatusBarUtil
+import com.linjun.utils.toast
 import com.linjun.widget.SimpleMultiStateView
 import com.trello.rxlifecycle2.LifecycleTransformer
 import javax.inject.Inject

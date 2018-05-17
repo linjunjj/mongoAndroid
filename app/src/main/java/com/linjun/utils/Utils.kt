@@ -35,8 +35,9 @@ fun  isConnected(context: Context):Boolean{
     val  net=connectivityManager.activeNetworkInfo
     return  net!=null&& net.isConnected
 }
-fun toast(context: Context,message:String,length:Int= Toast.LENGTH_LONG){
-    Toast.makeText(context,message,length).show()
+
+fun toast(context: Context, message: String, length: Int = Toast.LENGTH_SHORT) {
+    Toast.makeText(context, message, length).show()
 }
 
 fun <T> Observable<T>.applySchedulers(): Observable<T> {
