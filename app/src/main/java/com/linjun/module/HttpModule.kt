@@ -15,7 +15,7 @@ class HttpModule {
         val cache=Cache(File(MyApp.instance.cacheDir,"HttpCache"),(1024*1024*100).toLong())
         return OkHttpClient().newBuilder().cache(cache)
                 .retryOnConnectionFailure(true)
-                .addInterceptor()
+
     }
 
 }

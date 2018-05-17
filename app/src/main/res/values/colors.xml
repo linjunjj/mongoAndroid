@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="tab_unselect">#a3a3a3</color>
+    <color name="news_tv_source_color">#a3a3a3</color>
+    <color name="statusBar">#BDBDBD</color>
+    <color name="tvUrlColor">#3c3c3c</color>
 </resources>

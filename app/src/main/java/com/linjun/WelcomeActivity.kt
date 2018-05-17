@@ -32,9 +32,6 @@ class WelcomeActivity : BaseActivity<BaseContract.BasePresenter>() {
     }
 
     override fun bindView(view: View, savedInstanceState: Bundle?) {
-        val gifDrawable = gifImageView.drawable as GifDrawable
-        gifDrawable.loopCount = 1
-        gifImageView.postDelayed({ gifDrawable.start() }, 100)
 
         ImageLoaderUtil.LoadImage(this, picUrl, iv_ad)
         mCompositeDisposable?.add(countDown(3)
