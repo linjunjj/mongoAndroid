@@ -43,6 +43,11 @@ public class BottomBar extends LinearLayout{
         mTabParams=new LayoutParams(0,ViewGroup.LayoutParams.MATCH_PARENT);
         mTabParams.weight=1;
     }
+
+    public BottomBar add
+
+
+
     public void setOnTabSelectedListener(OnTabSelectedListener onTabSelectedListener) {
         mListener = onTabSelectedListener;
     }
@@ -68,7 +73,7 @@ public class BottomBar extends LinearLayout{
     @Override
     protected Parcelable onSaveInstanceState() {
         Parcelable superState=super.onSaveInstanceState();
-        return new ;
+        return new SavedState(superState,mCurrentPosition);
     }
 
 
