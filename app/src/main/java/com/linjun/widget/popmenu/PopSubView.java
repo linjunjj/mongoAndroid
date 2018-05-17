@@ -25,7 +25,6 @@ public class PopSubView extends LinearLayout {
     public PopSubView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
-
     public PopSubView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context);

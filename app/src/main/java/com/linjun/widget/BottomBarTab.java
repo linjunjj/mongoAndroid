@@ -1,4 +1,4 @@
-package com.linjun.widget.popmenu;
+package com.linjun.widget;
 
 import android.content.Context;
 import android.support.annotation.DrawableRes;
