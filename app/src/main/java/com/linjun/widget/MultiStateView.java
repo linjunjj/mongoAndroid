@@ -9,9 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import com.linjun.mongoandroid.R;
+import com.linjun.R;
 
 public class MultiStateView extends FrameLayout {
+
     private static final String TAG = MultiStateView.class.getSimpleName();
 
     public static final int STATE_CONTENT = 10001;

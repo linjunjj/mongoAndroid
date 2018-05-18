@@ -14,17 +14,22 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
 
-public class BottomBar extends LinearLayout{
-    private  static  final  int TRANSLATE_DURATION_MILLIS=200;
-    private  final Interpolator mInterpolator=new AccelerateDecelerateInterpolator();
-    private  boolean mVisible=true;
-    private  LinearLayout mTabLayout;
+public class BottomBar extends LinearLayout {
+    private static final int TRANSLATE_DURATION_MILLIS = 200;
+
+    private final Interpolator mInterpolator = new AccelerateDecelerateInterpolator();
+    private boolean mVisible = true;
+
+    private LinearLayout mTabLayout;
+
     private LayoutParams mTabParams;
-    private  int mCurrentPosition=0;
+    private int mCurrentPosition = 0;
     private OnTabSelectedListener mListener;
+
     public BottomBar(Context context) {
-        super(context);
+        this(context, null);
     }
+
     public BottomBar(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
@@ -36,15 +41,21 @@ public class BottomBar extends LinearLayout{
 
     private void init(Context context, AttributeSet attrs) {
         setOrientation(VERTICAL);
-        mTabLayout=new LinearLayout(context);
+
+//        ImageView shadowView = new ImageView(context);
+//        shadowView.setBackgroundResource(R.drawable.actionbar_shadow_up);
+//        addView(shadowView, new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+
+        mTabLayout = new LinearLayout(context);
         mTabLayout.setBackgroundColor(Color.WHITE);
         mTabLayout.setOrientation(LinearLayout.HORIZONTAL);
-        addView(mTabLayout,new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT));
-        mTabParams=new LayoutParams(0,ViewGroup.LayoutParams.MATCH_PARENT);
-        mTabParams.weight=1;
+        addView(mTabLayout, new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+
+        mTabParams = new LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
+        mTabParams.weight = 1;
     }
 
-    public BottomBar addItem(final BottomBarTab tab){
+    public BottomBar addItem(final BottomBarTab tab) {
         tab.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,10 +77,7 @@ public class BottomBar extends LinearLayout{
         tab.setLayoutParams(mTabParams);
         mTabLayout.addView(tab);
         return this;
-
     }
-
-
 
     public void setOnTabSelectedListener(OnTabSelectedListener onTabSelectedListener) {
         mListener = onTabSelectedListener;
@@ -92,13 +100,11 @@ public class BottomBar extends LinearLayout{
         void onTabReselected(int position);
     }
 
-    @Nullable
     @Override
     protected Parcelable onSaveInstanceState() {
-        Parcelable superState=super.onSaveInstanceState();
-        return new SavedState(superState,mCurrentPosition);
+        Parcelable superState = super.onSaveInstanceState();
+        return new SavedState(superState, mCurrentPosition);
     }
-
 
     @Override
     protected void onRestoreInstanceState(Parcelable state) {
@@ -118,7 +124,6 @@ public class BottomBar extends LinearLayout{
 
     static class SavedState extends BaseSavedState {
         private int position;
-
 
         public SavedState(Parcel source) {
             super(source);
@@ -146,6 +151,7 @@ public class BottomBar extends LinearLayout{
             }
         };
     }
+
 
     public void hide() {
         hide(true);
@@ -199,6 +205,4 @@ public class BottomBar extends LinearLayout{
             }
         }
     }
-
-
 }

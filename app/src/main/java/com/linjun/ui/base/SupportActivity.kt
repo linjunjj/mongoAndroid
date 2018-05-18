@@ -86,3 +86,4 @@ open abstract class SupportActivity : RxAppCompatActivity(), ISupportActivity {
     fun <T : ISupportFragment> findFragment(fragmentClass: Class<T>): T = SupportHelper.findFragment(supportFragmentManager, fragmentClass)
 
 }
+

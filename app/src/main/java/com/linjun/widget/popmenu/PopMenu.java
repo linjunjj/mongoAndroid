@@ -17,8 +17,8 @@ import com.facebook.rebound.SimpleSpringListener;
 import com.facebook.rebound.Spring;
 import com.facebook.rebound.SpringConfig;
 import com.facebook.rebound.SpringSystem;
+import com.linjun.R;
 import com.linjun.model.PopMenuItem;
-import com.linjun.mongoandroid.R;
 
 import java.util.ArrayList;
 import java.util.List;

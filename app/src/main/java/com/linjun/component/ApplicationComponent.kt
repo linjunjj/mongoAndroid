@@ -10,5 +10,4 @@ import dagger.Component
 interface ApplicationComponent{
     val application: MyApp
     val context: Context
-
 }

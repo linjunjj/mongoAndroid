@@ -5,7 +5,8 @@ import android.content.res.TypedArray;
 import android.support.annotation.LayoutRes;
 import android.util.AttributeSet;
 
-import com.linjun.mongoandroid.R;
+import com.linjun.R;
+
 
 public class SimpleMultiStateView extends  MultiStateView{
     private static final String TAG = SimpleMultiStateView.class.getSimpleName();

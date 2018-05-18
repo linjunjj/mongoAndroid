@@ -8,7 +8,7 @@ import android.support.annotation.Nullable
 import android.view.View
 import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper
 import com.linjun.MyApp
-import com.linjun.mongoandroid.R
+import com.linjun.R
 import com.linjun.ui.listener.IBase
 import com.linjun.utils.StatusBarUtil
 import com.linjun.utils.toast

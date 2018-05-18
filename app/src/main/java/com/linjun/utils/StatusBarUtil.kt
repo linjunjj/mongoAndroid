@@ -13,9 +13,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.LinearLayout
-import com.linjun.mongoandroid.R
-
-import com.will.weiyuekotlin.R
+import com.linjun.R
 
 
 /**
@@ -49,7 +47,7 @@ object StatusBarUtil {
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             activity.window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
             val decorView = activity.window.decorView as ViewGroup
-            val fakeStatusBarView = decorView.findViewById(FAKE_STATUS_BAR_VIEW_ID)
+            val fakeStatusBarView = decorView.findViewById<View>(FAKE_STATUS_BAR_VIEW_ID)
             if (fakeStatusBarView != null) {
                 if (fakeStatusBarView.visibility == View.GONE) {
                     fakeStatusBarView.visibility = View.VISIBLE
@@ -74,7 +72,7 @@ object StatusBarUtil {
                              @IntRange(from = 0, to = 255) statusBarAlpha: Int = DEFAULT_STATUS_BAR_ALPHA) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 
-            val contentView = activity.findViewById(android.R.id.content) as ViewGroup
+            val contentView = activity.findViewById<View>(android.R.id.content) as ViewGroup
             val rootView = contentView.getChildAt(0)
             val statusBarHeight = getStatusBarHeight(activity)
             if (rootView != null && rootView is CoordinatorLayout) {
@@ -119,9 +117,9 @@ object StatusBarUtil {
             return
         }
         transparentStatusBar(activity)
-        val contentView = activity.findViewById(android.R.id.content) as ViewGroup
+        val contentView = activity.findViewById<View>(android.R.id.content) as ViewGroup
         // 移除半透明矩形,以免叠加
-        val fakeStatusBarView = contentView.findViewById(FAKE_STATUS_BAR_VIEW_ID)
+        val fakeStatusBarView = contentView.findViewById<View>(FAKE_STATUS_BAR_VIEW_ID)
         if (fakeStatusBarView != null) {
             if (fakeStatusBarView.visibility == View.GONE) {
                 fakeStatusBarView.visibility = View.VISIBLE
@@ -233,7 +231,7 @@ object StatusBarUtil {
         // 生成一个状态栏大小的矩形
         // 添加 statusBarView 到布局中
         val contentLayout = drawerLayout.getChildAt(0) as ViewGroup
-        val fakeStatusBarView = contentLayout.findViewById(FAKE_STATUS_BAR_VIEW_ID)
+        val fakeStatusBarView = contentLayout.findViewById<View>(FAKE_STATUS_BAR_VIEW_ID)
         if (fakeStatusBarView != null) {
             if (fakeStatusBarView.visibility == View.GONE) {
                 fakeStatusBarView.visibility = View.VISIBLE
@@ -280,7 +278,7 @@ object StatusBarUtil {
             activity.window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
             // 生成一个状态栏大小的矩形
             val contentLayout = drawerLayout.getChildAt(0) as ViewGroup
-            val fakeStatusBarView = contentLayout.findViewById(FAKE_STATUS_BAR_VIEW_ID)
+            val fakeStatusBarView = contentLayout.findViewById<View>(FAKE_STATUS_BAR_VIEW_ID)
             if (fakeStatusBarView != null) {
                 if (fakeStatusBarView.visibility == View.GONE) {
                     fakeStatusBarView.visibility = View.VISIBLE
@@ -454,11 +452,11 @@ object StatusBarUtil {
      */
     fun hideFakeStatusBarView(activity: Activity) {
         val decorView = activity.window.decorView as ViewGroup
-        val fakeStatusBarView = decorView.findViewById(FAKE_STATUS_BAR_VIEW_ID)
+        val fakeStatusBarView = decorView.findViewById<View>(FAKE_STATUS_BAR_VIEW_ID)
         if (fakeStatusBarView != null) {
             fakeStatusBarView.visibility = View.GONE
         }
-        val fakeTranslucentView = decorView.findViewById(FAKE_TRANSLUCENT_VIEW_ID)
+        val fakeTranslucentView = decorView.findViewById<View>(FAKE_TRANSLUCENT_VIEW_ID)
         if (fakeTranslucentView != null) {
             fakeTranslucentView.visibility = View.GONE
         }
@@ -469,10 +467,10 @@ object StatusBarUtil {
     @TargetApi(Build.VERSION_CODES.KITKAT)
     private fun clearPreviousSetting(activity: Activity) {
         val decorView = activity.window.decorView as ViewGroup
-        val fakeStatusBarView = decorView.findViewById(FAKE_STATUS_BAR_VIEW_ID)
+        val fakeStatusBarView = decorView.findViewById<View>(FAKE_STATUS_BAR_VIEW_ID)
         if (fakeStatusBarView != null) {
             decorView.removeView(fakeStatusBarView)
-            val rootView = (activity.findViewById(android.R.id.content) as ViewGroup).getChildAt(0) as ViewGroup
+            val rootView = (activity.findViewById<View>(android.R.id.content) as ViewGroup).getChildAt(0) as ViewGroup
             rootView.setPadding(0, 0, 0, 0)
         }
     }
@@ -484,8 +482,8 @@ object StatusBarUtil {
      * @param statusBarAlpha 透明值
      */
     private fun addTranslucentView(activity: Activity, @IntRange(from = 0, to = 255) statusBarAlpha: Int) {
-        val contentView = activity.findViewById(android.R.id.content) as ViewGroup
-        val fakeTranslucentView = contentView.findViewById(FAKE_TRANSLUCENT_VIEW_ID)
+        val contentView = activity.findViewById<View>(android.R.id.content) as ViewGroup
+        val fakeTranslucentView = contentView.findViewById<View>(FAKE_TRANSLUCENT_VIEW_ID)
         if (fakeTranslucentView != null) {
             if (fakeTranslucentView.visibility == View.GONE) {
                 fakeTranslucentView.visibility = View.VISIBLE
@@ -518,7 +516,7 @@ object StatusBarUtil {
      * 设置根布局参数
      */
     private fun setRootView(activity: Activity) {
-        val parent = activity.findViewById(android.R.id.content) as ViewGroup
+        val parent = activity.findViewById<View>(android.R.id.content) as ViewGroup
         var i = 0
         val count = parent.childCount
         while (i < count) {

@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.linjun.component.ApplicationComponent
-import com.linjun.mongoandroid.R
 import com.linjun.ui.base.BaseActivity
 import com.linjun.ui.base.BaseContract
 import com.linjun.utils.ImageLoaderUtil

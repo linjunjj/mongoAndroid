@@ -15,7 +15,6 @@ import java.text.SimpleDateFormat
 import java.time.Duration
 import java.util.*
 
-@SuppressLint("MissingPermission")
 fun  isMobileConnected(context: Context?):Boolean{
     if (context!=null){
         val mConnectivityManager=context
@@ -101,7 +100,6 @@ fun  sizeOf(size:Int):Int{
         i++
     }
 }
-@SuppressLint("SimpleDateFormat")
 fun date2HHmm(date: Date): String {
     return SimpleDateFormat("HH:mm").format(date)
 }
