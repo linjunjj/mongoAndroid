@@ -7,12 +7,15 @@ import com.linjun.component.ApplicationComponent
 import com.linjun.mongoandroid.R
 import com.linjun.ui.base.BaseActivity
 import com.linjun.ui.base.BaseContract
+import com.linjun.widget.BottomBarTab
 import com.linjun.widget.SimpleMultiStateView
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
 
     override fun getContentLayout(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return R.layout.activity_main
     }
 
     override fun getSimpleMultiStateView(): SimpleMultiStateView? {
@@ -24,7 +27,11 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
     }
 
     override fun bindView(view: View, savedInstanceState: Bundle?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        mBootomBar.addItem(BottomBarTab(this, R.drawable.home, "首页"))
+        mBootomBar.addItem(BottomBarTab(this, R.drawable.message, "首页"))
+
+        mBootomBar.addItem(BottomBarTab(this, R.drawable.message, "首页"))
+        mBootomBar.addItem(BottomBarTab(this, R.drawable.message, "我的"))
     }
 
     override fun initData() {
@@ -33,5 +40,17 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+    }
+
+    override fun onBackPressedSupport() {
+        if (JCVideoPlayer.backPress()){
+            return
+        }
+        super.onBackPressedSupport()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        JCVideoPlayer.releaseAllVideos()
     }
 }
