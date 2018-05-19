@@ -73,6 +73,7 @@ public class BottomBar extends LinearLayout {
                 }
             }
         });
+        System.out.println(mTabLayout.getChildCount());
         tab.setTabPosition(mTabLayout.getChildCount());
         tab.setLayoutParams(mTabParams);
         mTabLayout.addView(tab);
@@ -86,6 +87,7 @@ public class BottomBar extends LinearLayout {
 
              }
          });
+         System.out.println(mTabLayout.getChildCount());
          tab.setTabPosition(mTabLayout.getChildCount());
          tab.setLayoutParams(mTabParams);
          mTabLayout.addView(tab);

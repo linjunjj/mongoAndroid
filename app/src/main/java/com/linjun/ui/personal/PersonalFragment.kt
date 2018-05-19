@@ -37,15 +37,12 @@ class PersonalFragment : BaseFragment<BasePresenter<BaseContract.BaseView>>() {
 
     override fun bindView(view: View, savedInstanceState: Bundle?) {
 
-        val mTypeFace = Typeface.createFromAsset(activity.assets, "font/consolab.ttf")
+
 
     }
 
     private fun setFont(vararg view: TextView) {
-        val typeface = Typeface.createFromAsset(activity.assets, "font/consola.ttf")
-        view.forEach {
-            it.typeface = typeface
-        }
+
     }
 
     private fun toWeb(url: String) {
