@@ -47,7 +47,7 @@ public class BottomBar extends LinearLayout {
 //        addView(shadowView, new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
         mTabLayout = new LinearLayout(context);
-        mTabLayout.setBackgroundColor(Color.WHITE);
+//        mTabLayout.setBackgroundColor(Color.GREEN);
         mTabLayout.setOrientation(LinearLayout.HORIZONTAL);
         addView(mTabLayout, new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 
@@ -78,6 +78,19 @@ public class BottomBar extends LinearLayout {
         mTabLayout.addView(tab);
         return this;
     }
+
+     public BottomBar addCenterItem(final  BottomBarCenterTab tab){
+         tab.setOnClickListener(new OnClickListener() {
+             @Override
+             public void onClick(View v) {
+
+             }
+         });
+         tab.setTabPosition(mTabLayout.getChildCount());
+         tab.setLayoutParams(mTabParams);
+         mTabLayout.addView(tab);
+         return this;
+     }
 
     public void setOnTabSelectedListener(OnTabSelectedListener onTabSelectedListener) {
         mListener = onTabSelectedListener;

@@ -45,17 +45,17 @@ public class BottomBarTab extends LinearLayout {
 
         setOrientation(LinearLayout.VERTICAL);
         mIcon = new ImageView(context);
-        int size = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20, getResources().getDisplayMetrics());
-        LayoutParams params = new LayoutParams(size, size);
+//        int size = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20, getResources().getDisplayMetrics());
+        LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         params.gravity = Gravity.CENTER_HORIZONTAL;
-        params.topMargin = ContextUtils.dip2px(context, 2.5f);
+        params.topMargin = ContextUtils.dip2px(context, 4.5f);
         mIcon.setImageResource(icon);
         mIcon.setLayoutParams(params);
 
         // mIcon.setColorFilter(ContextCompat.getColor(context, R.color.tab_unselect));
         LayoutParams textViewParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         textViewParams.gravity = Gravity.CENTER_HORIZONTAL;
-        // textViewParams.addRule(ALIGN_PARENT_BOTTOM);
+//         textViewParams.addRule(ALIGN_PARENT_BOTTOM);
         textViewParams.topMargin = ContextUtils.dip2px(context, 2.5f);
         textViewParams.bottomMargin = ContextUtils.dip2px(context, 2.5f);
         mTextView = new TextView(context);
@@ -71,8 +71,8 @@ public class BottomBarTab extends LinearLayout {
     public void setSelected(boolean selected) {
         super.setSelected(selected);
         if (selected) {
-            mIcon.setColorFilter(ContextCompat.getColor(mContext, R.color.colorPrimary));
-            mTextView.setTextColor(ContextCompat.getColor(mContext, R.color.colorPrimary));
+            mIcon.setColorFilter(ContextCompat.getColor(mContext, R.color.tabcolor));
+            mTextView.setTextColor(ContextCompat.getColor(mContext, R.color.tabcolor));
 
         } else {
             mIcon.setColorFilter(ContextCompat.getColor(mContext, R.color.tab_unselect));

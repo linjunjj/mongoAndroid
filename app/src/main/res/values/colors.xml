@@ -7,4 +7,5 @@
     <color name="news_tv_source_color">#a3a3a3</color>
     <color name="statusBar">#BDBDBD</color>
     <color name="tvUrlColor">#3c3c3c</color>
+    <color name="tabcolor">#FF8200</color>
 </resources>
