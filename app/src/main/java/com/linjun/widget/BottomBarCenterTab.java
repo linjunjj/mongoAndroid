@@ -2,7 +2,6 @@ package com.linjun.widget;
 
 import android.content.Context;
 import android.support.annotation.DrawableRes;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -10,9 +9,11 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.linjun.R;
+import com.linjun.utils.ContextUtils;
 
 public class BottomBarCenterTab extends RelativeLayout {
     private ImageView mIcon;
+    private ImageView cIcon;
     private Context mContext;
     private  int icon;
     private int mTabPosition = -1;
@@ -21,7 +22,6 @@ public class BottomBarCenterTab extends RelativeLayout {
     public BottomBarCenterTab(Context context, @DrawableRes int icon) {
         this(context,null,icon);
     }
-
     public BottomBarCenterTab(Context context, AttributeSet attrs,int icon) {
       this(context,attrs,0,icon);
     }
@@ -32,27 +32,38 @@ public class BottomBarCenterTab extends RelativeLayout {
     }
 
     private void init(Context context, int icon) {
-            relativeLayout=new RelativeLayout(context);
-            relativeLayout.setBackground(getResources().getDrawable(R.drawable.tabbar_compose_button));
-         LayoutParams  params=new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-           params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        params.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        relativeLayout.setLayoutParams(params);
-            addView(relativeLayout, new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+//            relativeLayout=new RelativeLayout(context);
+//            relativeLayout.setBackground(getResources().getDrawable(R.drawable.tabbar_compose_button));
+//             LayoutParams params= new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+//             params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+//              params.addRule(RelativeLayout.CENTER_IN_PARENT);
+////              params.leftMargin= ContextUtils.dip2px(context, 1.5f);
+//             relativeLayout.setLayoutParams(params);
              mContext=context;
              this.icon=icon;
              mIcon=new ImageView(context);
+             cIcon=new ImageView(context);
+         LayoutParams conParams=new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+               conParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+              cIcon.setImageResource(R.drawable.tabbar_compose_button);
+              cIcon.setLayoutParams(conParams);
              LayoutParams iconParams=new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
              iconParams.addRule(RelativeLayout.CENTER_IN_PARENT);
              mIcon.setImageResource(icon);
              mIcon.setLayoutParams(iconParams);
-             relativeLayout.addView(mIcon);
+             addView(cIcon);
+            addView(mIcon);
+//        addView(relativeLayout, new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 
     }
     @Override
     public void setSelected(boolean selected) {
         super.setSelected(selected);
+        if (selected) {
 
+        } else {
+//            mIcon.setColorFilter(ContextCompat.getColor(mContext, R.color.tab_unselect));
+        }
     }
 
 

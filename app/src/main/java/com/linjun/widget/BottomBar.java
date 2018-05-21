@@ -55,7 +55,7 @@ public class BottomBar extends LinearLayout {
         mTabParams.weight = 1;
     }
 
-    public BottomBar addItem(final BottomBarTab tab) {
+    public BottomBar addItem(final BottomBarTab tab ,int  type) {
         tab.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,8 +73,7 @@ public class BottomBar extends LinearLayout {
                 }
             }
         });
-        System.out.println(mTabLayout.getChildCount());
-        tab.setTabPosition(mTabLayout.getChildCount());
+        tab.setTabPosition(type);
         tab.setLayoutParams(mTabParams);
         mTabLayout.addView(tab);
         return this;
@@ -87,19 +86,19 @@ public class BottomBar extends LinearLayout {
                  if (mListener == null) return;
 
                  int pos = tab.getTabPosition();
+                 System.out.println(pos);
                  if (mCurrentPosition == pos) {
                      mListener.onTabReselected(pos);
                  } else {
                      mListener.onTabSelected(pos, mCurrentPosition);
-                     tab.setSelected(true);
+                     tab.setSelected(false);
                      mListener.onTabUnselected(mCurrentPosition);
 //                     mTabLayout.getChildAt(mCurrentPosition).setSelected(false);
 //                     mCurrentPosition = pos;
                  }
              }
          });
-         System.out.println(mTabLayout.getChildCount());
-         tab.setTabPosition(mTabLayout.getChildCount());
+         tab.setTabPosition(2);
          tab.setLayoutParams(mTabParams);
          mTabLayout.addView(tab);
          return this;
