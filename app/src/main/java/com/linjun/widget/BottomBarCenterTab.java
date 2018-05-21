@@ -52,11 +52,7 @@ public class BottomBarCenterTab extends RelativeLayout {
     @Override
     public void setSelected(boolean selected) {
         super.setSelected(selected);
-        if (selected) {
 
-        } else {
-            mIcon.setColorFilter(ContextCompat.getColor(mContext, R.color.tab_unselect));
-        }
     }
 
 

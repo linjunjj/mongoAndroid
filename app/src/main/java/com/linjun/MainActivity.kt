@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
     private val mFragments = arrayOfNulls<SupportFragment>(5)
     override fun getContentLayout(): Int = R.layout.activity_main
-    private var menu: PopMenu?=null
+    private var mPopMenu: PopMenu? = null
     override fun getSimpleMultiStateView(): SimpleMultiStateView? = null
 
     override fun initInjector(appComponent: ApplicationComponent) {}
@@ -51,13 +51,13 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
         mBootomBar.addCenterItem(BottomBarCenterTab(this,R.drawable.tabbar_compose_icon_add))
         mBootomBar.addItem(BottomBarTab(this, R.drawable.find, "发现"))
         mBootomBar.addItem(BottomBarTab(this, R.drawable.me, "我的"))
-        menu = PopMenu.Builder().attachToActivity(this@MainActivity)
-                .addMenuItem(PopMenuItem("文字", R.drawable.tabbar_compose_idea))
-                .addMenuItem(PopMenuItem("照片/视频",R.drawable.tabbar_compose_photo))
-                .addMenuItem(PopMenuItem("头条文章", resources.getDrawable(R.drawable.tabbar_compose_headlines)))
-                .addMenuItem(PopMenuItem("签到", resources.getDrawable(R.drawable.tabbar_compose_lbs)))
-                .addMenuItem(PopMenuItem("点评", resources.getDrawable(R.drawable.tabbar_compose_review)))
-                .addMenuItem(PopMenuItem("更多", resources.getDrawable(R.drawable.tabbar_compose_more)))
+        mPopMenu = PopMenu.Builder().attachToActivity(this@MainActivity)
+                .addMenuItem(PopMenuItem("文字", resources.getDrawable(R.drawable.tabbar_compose_idea)))
+                .addMenuItem(PopMenuItem("照片/视频",resources.getDrawable(R.drawable.tabbar_compose_idea)))
+                .addMenuItem(PopMenuItem("头条文章", resources.getDrawable(R.drawable.tabbar_compose_idea)))
+                .addMenuItem(PopMenuItem("签到", resources.getDrawable(R.drawable.tabbar_compose_idea)))
+                .addMenuItem(PopMenuItem("点评", resources.getDrawable(R.drawable.tabbar_compose_idea)))
+                .addMenuItem(PopMenuItem("更多", resources.getDrawable(R.drawable.tabbar_compose_idea)))
                 .setOnItemClickListener(object : PopMenuItemListener {
                     override fun onItemClick(popMenu: PopMenu, position: Int) {
                         Toast.makeText(this@MainActivity, "你点击了第" + position + "个位置", Toast.LENGTH_SHORT).show()
@@ -65,10 +65,14 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
                 })
                 .build()
 
-
         mBootomBar.setOnTabSelectedListener(object : BottomBar.OnTabSelectedListener  {
             override fun onTabSelected(position: Int, prePosition: Int) {
-                supportDelegate.showHideFragment(mFragments[position], mFragments[prePosition])
+               if(position==2){
+                   mPopMenu?.show()
+                   System.out.println(position)
+               }else{
+                   supportDelegate.showHideFragment(mFragments[position], mFragments[prePosition])
+               }
             }
             override fun onTabUnselected(position: Int) {
 
@@ -78,6 +82,8 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
             }
 
         })
+
+
 
 
 
