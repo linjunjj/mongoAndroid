@@ -68,7 +68,10 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
         mBootomBar.setOnTabSelectedListener(object : BottomBar.OnTabSelectedListener  {
             override fun onTabSelected(position: Int, prePosition: Int) {
                if(position==2){
-                   mPopMenu?.show()
+
+                   if (!mPopMenu?.isShowing()!!) {
+                       mPopMenu?.show()
+                   }
                    System.out.println(position)
                }else{
                    supportDelegate.showHideFragment(mFragments[position], mFragments[prePosition])

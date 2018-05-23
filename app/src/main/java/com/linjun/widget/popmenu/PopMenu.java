@@ -107,7 +107,6 @@ public class PopMenu {
         contentView.addView(mAnimateLayout);
         //执行显示动画
         showSubMenus(mGridLayout);
-
         isShowing = true;
     }
 

@@ -61,7 +61,6 @@ public class BottomBar extends LinearLayout {
             @Override
             public void onClick(View v) {
                 if (mListener == null) return;
-                      temp=0;
                 int pos = tab.getTabPosition();
                 if (mCurrentPosition == pos) {
                     mListener.onTabReselected(pos);
@@ -89,16 +88,11 @@ public class BottomBar extends LinearLayout {
 
                  int pos = tab.getTabPosition();
                  System.out.println(pos);
-                 if (temp == pos) {
-                     mListener.onTabReselected(pos);
-                 } else {
                      mListener.onTabSelected(pos, mCurrentPosition);
                      tab.setSelected(false);
                      mListener.onTabUnselected(mCurrentPosition);
                      mTabLayout.getChildAt(mCurrentPosition).setSelected(true);
-//                     mCurrentPosition = pos;
-                     temp=pos;
-                 }
+
              }
          });
          tab.setTabPosition(2);
