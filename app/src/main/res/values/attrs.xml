@@ -33,5 +33,18 @@
         <item name="android:windowEnterAnimation">@anim/dialog_bottom_slide_in</item>
         <item name="android:windowExitAnimation">@anim/dialog_bottom_slide_out</item>
     </style>
+    <declare-styleable name="WaveProgressView">
+        <attr name="radius" format="dimension|reference" />
+        <attr name="radius_color" format="color|reference" />
+        <attr name="progress_text_color" format="color|reference" />
+        <attr name="progress_text_size" format="dimension|reference" />
+        <attr name="progress_color" format="color|reference" />
+        <attr name="progress" format="float" />
+        <attr name="maxProgress" format="float" />
+    </declare-styleable>
 
+    <declare-styleable name="SwitchButton">
+        <attr name="bmWidth" format="dimension"></attr>
+        <attr name="bmHeight" format="dimension"></attr>
+    </declare-styleable>
 </resources>
