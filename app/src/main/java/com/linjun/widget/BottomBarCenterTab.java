@@ -32,13 +32,6 @@ public class BottomBarCenterTab extends RelativeLayout {
     }
 
     private void init(Context context, int icon) {
-//            relativeLayout=new RelativeLayout(context);
-//            relativeLayout.setBackground(getResources().getDrawable(R.drawable.tabbar_compose_button));
-//             LayoutParams params= new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-//             params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-//              params.addRule(RelativeLayout.CENTER_IN_PARENT);
-////              params.leftMargin= ContextUtils.dip2px(context, 1.5f);
-//             relativeLayout.setLayoutParams(params);
              mContext=context;
              this.icon=icon;
              mIcon=new ImageView(context);
