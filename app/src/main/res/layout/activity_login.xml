@@ -50,7 +50,7 @@
         android:background="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.linjun.yunjunrui.view.EditTextWithDeleteButton
+        <com.linjun.widget.EditTextWithDeleteButton
             android:hint="请输入账号"
             android:id="@+id/user_account"
             android:layout_marginBottom="5dp"
@@ -61,7 +61,7 @@
             android:background="@color/line"
             android:layout_width="match_parent"
             android:layout_height="1dp"></View>
-        <com.linjun.yunjunrui.view.EditTextWithDeleteButton
+        <com.linjun.widget.EditTextWithDeleteButton
             android:layout_marginTop="5dp"
             android:hint="请输入密码"
             android:id="@+id/user_passworld"
