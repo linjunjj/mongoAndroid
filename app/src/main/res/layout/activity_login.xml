@@ -19,6 +19,7 @@
             android:scaleType="centerInside"
             android:src="@mipmap/back" />
 
+
         <TextView
             android:text="登入"
             android:id="@+id/tv_device_name"
