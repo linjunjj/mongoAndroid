@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#0097A7</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="tab_unselect">#a3a3a3</color>
@@ -12,5 +12,10 @@
     <color name="text_color_chengse">#FF8472</color>
     <color name="line">#f5f5f5f5</color>
     <color name="white">#ffffff</color>
+    <color name="button_sure">#fe8b55</color>
+    <color name="textColor1">#3B3B3B</color>
+    <color name="tbreak">#3C3C3C</color>
+    <color name="text_color_bule">#614BEE</color>
+    <color name="toolbar_color">#f6f6f6f6</color>
 
 </resources>
