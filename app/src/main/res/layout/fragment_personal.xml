@@ -34,7 +34,7 @@
                     android:visibility="invisible"
                     android:layout_gravity="center"
                     android:id="@+id/tv_tips"
-                    android:text="请登入"
+                    android:text="请登入1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
