@@ -18,5 +18,7 @@
     <color name="text_color_bule">#614BEE</color>
     <color name="toolbar_color">#f6f6f6f6</color>
     <color name="chengs">#a44100</color>
-
+  <color name="personlbackground">#23A5BC</color>
+    <color name="person_textcolor">#F0FBFC</color>
+    <color name="pserson_headerbackground">#AC9474</color>
 </resources>
