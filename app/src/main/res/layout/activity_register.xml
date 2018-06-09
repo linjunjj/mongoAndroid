@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_backgorund"
+    xmlns:app="http://schemas.android.com/apk/com.linjun.yunjunrui">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:layout_height="45dp">
+        <ImageView
+            android:id="@+id/iv_registerback"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/back_icon" />
+
+        <TextView
+            android:text="注册"
+            android:id="@+id/tv_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:textColor="@color/textColor1"
+            android:textSize="18sp" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:visibility="visible"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/header"
+        android:layout_below="@+id/user_icon"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.linjun.widget.EditTextWithDeleteButton
+            android:hint="用户名"
+            android:id="@+id/user_name1"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/editshape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@color/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+        <com.linjun.widget.EditTextWithDeleteButton
+            android:hint="手机号码"
+            android:id="@+id/user_tel"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/editshape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@color/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.linjun.widget.EditTextWithDeleteButton
+                android:hint="验证码"
+                android:layout_weight="3"
+                android:id="@+id/ed_auth_code"
+                android:background="@drawable/editshape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textColor="@color/button_sure"
+                android:layout_weight="1"
+                android:text="获取验证码"
+                android:textSize="15sp"
+                android:id="@+id/get_auth_code"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+        <View
+            android:background="@color/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+
+        <com.linjun.widget.EditTextWithDeleteButton
+            android:layout_marginTop="5dp"
+            android:hint="请输入密码"
+            android:id="@+id/user_passworld"
+            android:inputType="textPassword"
+            android:background="@drawable/editshape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/btn_register1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_selector"
+        android:text="注册"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+
+</LinearLayout>
+
+
+
+</LinearLayout>

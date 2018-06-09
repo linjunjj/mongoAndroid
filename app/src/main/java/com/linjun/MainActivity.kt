@@ -47,9 +47,9 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
             mFragments[4] = findFragment(PersonalFragment::class.java)
         }
         mBootomBar.addItem(BottomBarTab(this, R.drawable.home, "首页"),0)
-        mBootomBar.addItem(BottomBarTab(this, R.drawable.message, "消息"),1)
+        mBootomBar.addItem(BottomBarTab(this, R.drawable.find, "发现"),1)
         mBootomBar.addCenterItem(BottomBarCenterTab(this,R.drawable.tabbar_compose_icon_add))
-        mBootomBar.addItem(BottomBarTab(this, R.drawable.find, "发现"),3)
+        mBootomBar.addItem(BottomBarTab(this, R.drawable.message, "消息"),3)
         mBootomBar.addItem(BottomBarTab(this, R.drawable.me, "我的"),4)
         mPopMenu = PopMenu.Builder().attachToActivity(this@MainActivity)
                 .addMenuItem(PopMenuItem("文字", resources.getDrawable(R.drawable.tabbar_compose_idea)))

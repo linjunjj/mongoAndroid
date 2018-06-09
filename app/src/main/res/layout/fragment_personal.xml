@@ -19,11 +19,6 @@
             android:background="@color/personlbackground"
             android:layout_width="match_parent"
             android:layout_height="130dp">
-            <com.linjun.widget.WareView
-                android:id="@+id/wareview"
-                android:layout_gravity="bottom"
-                android:layout_width="match_parent"
-                android:layout_height="15dp" />
             <RelativeLayout
                 android:layout_marginLeft="15dp"
                 android:layout_gravity="center_vertical"
@@ -543,6 +538,10 @@
                     android:layout_marginRight="10dp"
                     android:src="@mipmap/right"/>
             </RelativeLayout>
+            <View
+                android:background="@color/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
             <RelativeLayout
                 android:clickable="true"
                 android:id="@+id/my_invite"
