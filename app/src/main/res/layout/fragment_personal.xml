@@ -291,6 +291,44 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:id="@+id/my_collect"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/selector_item_press">
+
+                <ImageView
+                    android:layout_margin="5dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/collect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center_vertical"
+                    android:text="我的收藏"
+                    android:textSize="13sp"
+                    android:textColor="#424242"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/right"/>
+            </RelativeLayout>
+
+
+
+
             <RelativeLayout
                 android:layout_marginTop="5dp"
                 android:clickable="true"
@@ -471,200 +509,108 @@
                     android:layout_marginRight="10dp"
                     android:src="@mipmap/right"/>
             </RelativeLayout>
+
             <RelativeLayout
-                android:id="@+id/r_user_icon"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:clickable="true"
+                android:id="@+id/my_account"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="40dp"
                 android:background="@drawable/selector_item_press">
 
+                <ImageView
+                    android:layout_margin="5dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/acount_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
                 <TextView
                     android:clickable="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="24dp"
+                    android:layout_marginLeft="30dp"
                     android:gravity="center_vertical"
-                    android:text="更换头像"
-                    android:textSize="20sp"
+                    android:text="账户与安全"
+                    android:textSize="13sp"
                     android:textColor="#424242"/>
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
-                    android:src="@mipmap/right"/>
-            </RelativeLayout>
-            <View
-                android:background="@color/line"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"></View>
-            <RelativeLayout
-                android:id="@+id/r_change_psw"
-                android:clickable="true"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/selector_item_press">
-                <TextView
-                    android:clickable="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="24dp"
-                    android:gravity="center_vertical"
-                    android:text="更换密码"
-                    android:textSize="20sp"
-                    android:textColor="#424242"/>
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
-                    android:src="@mipmap/right"/>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_marginTop="20dp"
-                android:clickable="true"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/selector_item_press">
-                <TextView
-                    android:clickable="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="24dp"
-                    android:gravity="center_vertical"
-                    android:text="开启上报数据"
-                    android:textSize="20sp"
-                    android:textColor="#424242"/>
-                <com.linjun.widget.UISwitchButton
-                    android:id="@+id/newsubbmit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
-                    />
-            </RelativeLayout>
-            <View
-                android:background="@color/line"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"></View>
-            <RelativeLayout
-                android:clickable="true"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/selector_item_press">
-                <TextView
-                    android:clickable="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="24dp"
-                    android:gravity="center_vertical"
-                    android:text="移动网络提醒"
-                    android:textSize="20sp"
-                    android:textColor="#424242"/>
-                <com.linjun.widget.UISwitchButton
-                    android:id="@+id/intent_switch"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
-                    />
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/r_about"
-                android:layout_marginTop="20dp"
-                android:clickable="true"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/selector_item_press">
-                <TextView
-                    android:clickable="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="24dp"
-                    android:gravity="center_vertical"
-                    android:text="关于云君瑞"
-                    android:textSize="20sp"
-                    android:textColor="#424242"/>
-                <ImageView
-                    android:id="@+id/icon"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
-                    android:src="@mipmap/right"/>
-            </RelativeLayout>
-            <View
-                android:background="@color/line"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"></View>
-
-            <RelativeLayout
-                android:id="@+id/r_share"
-                android:clickable="true"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/selector_item_press">
-                <TextView
-                    android:clickable="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="24dp"
-                    android:gravity="center_vertical"
-                    android:text="邀请朋友体验云君瑞"
-                    android:textSize="20sp"
-                    android:textColor="#424242"/>
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:src="@mipmap/right"/>
             </RelativeLayout>
             <RelativeLayout
-                android:id="@+id/r_check"
-                android:layout_marginTop="20dp"
                 android:clickable="true"
+                android:id="@+id/my_invite"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="40dp"
                 android:background="@drawable/selector_item_press">
+                <ImageView
+                    android:layout_margin="5dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/invite_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
                 <TextView
                     android:clickable="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="24dp"
+                    android:layout_marginLeft="30dp"
                     android:gravity="center_vertical"
-                    android:text="检查更新"
-                    android:textSize="20sp"
+                    android:text="我邀请的人"
+                    android:textSize="13sp"
                     android:textColor="#424242"/>
-                <ImageView
 
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:src="@mipmap/right"/>
             </RelativeLayout>
-            <View
-                android:background="@color/line"
+
+            <RelativeLayout
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:id="@+id/my_setting"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"></View>
+                android:layout_height="40dp"
+                android:background="@drawable/selector_item_press">
+
+                <ImageView
+                    android:layout_margin="5dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/setting_icom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center_vertical"
+                    android:text="设置"
+                    android:textSize="13sp"
+                    android:textColor="#424242"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/right"/>
+            </RelativeLayout>
+
+
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -8,16 +8,16 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:background="@color/toolbar_color"
+        android:background="@color/white"
         android:fitsSystemWindows="true"
         app:layout_scrollFlags="scroll|enterAlways"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="45dp">
         <ImageView
             android:id="@+id/iv_loginback"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:scaleType="centerInside"
-            android:src="@mipmap/back" />
+            android:src="@mipmap/back_icon" />
 
 
         <TextView
@@ -28,21 +28,24 @@
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:textColor="@color/textColor1"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
     </android.support.v7.widget.Toolbar>
 
 
     <LinearLayout
         android:id="@+id/header"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="120dp"
         android:orientation="vertical"
         android:background="#ffffff"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.linjun.widget.EditTextWithDeleteButton
             android:hint="请输入账号"
             android:id="@+id/user_account"
+            android:textSize="15sp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/editshape"
             android:layout_width="match_parent"
@@ -55,6 +58,7 @@
             android:layout_marginTop="5dp"
             android:hint="请输入密码"
             android:id="@+id/user_passworld"
+            android:textSize="15sp"
             android:inputType="textPassword"
             android:background="@drawable/editshape"
             android:layout_width="match_parent"
@@ -65,8 +69,8 @@
         android:id="@+id/bowwn"
         android:layout_below="@+id/header"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <CheckBox
@@ -100,16 +104,16 @@
 
     <Button
         android:layout_below="@+id/bowwn"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/btn_login"
         android:layout_marginTop="30dp"
-        android:textSize="22sp"
+        android:textSize="15sp"
         android:textColor="@color/white"
         android:text="登入"
         android:background="@drawable/button_selector"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="40dp" />
 
 
     <Button
@@ -124,5 +128,40 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:weightSum="3"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_centerHorizontal="true">
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/qq_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@mipmap/login_qq"/>
+
+        <ImageView
+            android:id="@+id/sina_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/login_sina"/>
+
+
+        <ImageView
+            android:id="@+id/wx_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/login_qq"/>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
