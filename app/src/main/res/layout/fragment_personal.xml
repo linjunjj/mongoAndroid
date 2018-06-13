@@ -32,7 +32,6 @@
                     android:src="@drawable/user_icon"
                     android:layout_width="50dp"
                     android:layout_height="50dp" />
-
                   <TextView
                       android:id="@+id/user_name"
                       android:layout_toRightOf="@id/ci_usericon"
@@ -170,12 +169,6 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
-
-
-
-
-
-
 
         <View
             android:background="@color/line"

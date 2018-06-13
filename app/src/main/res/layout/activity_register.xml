@@ -41,17 +41,7 @@
         android:background="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.linjun.widget.EditTextWithDeleteButton
-            android:hint="用户名"
-            android:id="@+id/user_name1"
-            android:layout_marginBottom="1dp"
-            android:background="@drawable/editshape"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <View
-            android:background="@color/line"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"></View>
+
         <com.linjun.widget.EditTextWithDeleteButton
             android:hint="手机号码"
             android:id="@+id/user_tel"
@@ -99,6 +89,19 @@
             android:layout_marginTop="1dp"
             android:hint="请输入密码"
             android:id="@+id/user_passworld"
+            android:inputType="textPassword"
+            android:background="@drawable/editshape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@color/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+
+        <com.linjun.widget.EditTextWithDeleteButton
+            android:layout_marginTop="1dp"
+            android:hint="请再次输入密码"
+            android:id="@+id/user_passworld_other"
             android:inputType="textPassword"
             android:background="@drawable/editshape"
             android:layout_width="match_parent"
