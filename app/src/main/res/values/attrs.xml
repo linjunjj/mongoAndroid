@@ -47,4 +47,7 @@
         <attr name="bmWidth" format="dimension"></attr>
         <attr name="bmHeight" format="dimension"></attr>
     </declare-styleable>
+    <declare-styleable name="ShimmerView">
+        <attr name="reflectionColor" format="color"/>
+    </declare-styleable>
 </resources>

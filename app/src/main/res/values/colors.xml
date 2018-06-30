@@ -12,7 +12,8 @@
     <color name="text_color_chengse">#FF8472</color>
     <color name="line">#f5f5f5f5</color>
     <color name="white">#ffffff</color>
-    <color name="button_sure">#fe8b55</color>
+    <color name="button_sure">#0097A7</color>
+    <color name="button_sure_o">#0B81BC</color>
     <color name="textColor1">#3B3B3B</color>
     <color name="tbreak">#3C3C3C</color>
     <color name="text_color_bule">#614BEE</color>
@@ -21,4 +22,9 @@
   <color name="personlbackground">#23A5BC</color>
     <color name="person_textcolor">#F0FBFC</color>
     <color name="pserson_headerbackground">#AC9474</color>
+    <color name="title_bg_color">#fafafa</color>
+    <color name="bg_red_color">#FB5553</color>
+    <color name="line_bg">#e5e5e5</color>
+    <color name="third_party_text_color">#999999</color>
+
 </resources>
