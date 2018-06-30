@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"  android:orientation="vertical"
+    android:layout_height="match_parent"  android:fitsSystemWindows="true" >
+<LinearLayout
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/main_backgorund"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <ImageView
+        android:id="@+id/ivLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@mipmap/back_icon"
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/etKey"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="4dp"
+        android:padding="6dp"
+        android:drawablePadding="6dp"
+        android:drawableLeft="@drawable/ic_top_search"
+        android:textSize="13sp"
+        android:layout_gravity="center"
+        android:hint="请输入要搜索的关键词"
+        android:imeOptions="actionSearch"
+        android:background="@drawable/search_edit_bg"/>
+     <TextView
+         android:id="@+id/tvRigth"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="搜索"
+         android:textSize="18sp"
+         android:padding="10dp"
+         android:textColor="@color/bg_red_color"/>
+</LinearLayout>
+    <include layout="@layout/line_h"/>
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
