@@ -22,6 +22,8 @@
     <string name="lable_password">密码</string>
     <string name="forget_password">忘记密码</string>
     <string name="third_party_login">第三方登录</string>
+<!--个人资料-->
+    <string name="editing">个人资料</string>
 
 </resources>
 
