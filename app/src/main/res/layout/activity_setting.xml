@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="@string/editing"
+            android:text="@string/setting"
             android:textColor="#000"
             android:textSize="18sp"/>
 
@@ -42,7 +42,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/txt_head"
+                android:id="@+id/txt_ident"
                 android:textSize="13sp"
                 android:gravity="center_vertical"
                 android:background="@drawable/setting_item_selector"
@@ -52,35 +52,11 @@
                 android:paddingRight="10dp"
                 android:layout_marginTop="15dp"
                 android:drawableRight="@mipmap/right"
-                android:text="头像" />
-              <include layout="@layout/line_h"></include>
-            <TextView
-                android:id="@+id/txt_nickname"
-                android:textSize="13sp"
-                android:gravity="center_vertical"
-                android:background="@drawable/setting_item_selector"
-                android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="10dp"
-                android:drawableRight="@mipmap/right"
-                android:text="昵称" />
-            <include layout="@layout/line_h"></include>
-            <TextView
-                android:id="@+id/txt_sex"
-                android:textSize="13sp"
-                android:gravity="center_vertical"
-                android:background="@drawable/setting_item_selector"
-                android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="10dp"
-                android:drawableRight="@mipmap/right"
-                android:text="性别" />
+                android:text="身份认证" />
             <include layout="@layout/line_h"></include>
 
             <TextView
-                android:id="@+id/txt_birth"
+                android:id="@+id/txt_changePassword"
                 android:textSize="13sp"
                 android:gravity="center_vertical"
                 android:background="@drawable/setting_item_selector"
@@ -89,47 +65,23 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
                 android:drawableRight="@mipmap/right"
-                android:text="出生日期" />
+                android:text="修改密码" />
             <include layout="@layout/line_h"></include>
             <TextView
-                android:id="@+id/txt_mood"
+                android:id="@+id/txt_clean"
                 android:textSize="13sp"
                 android:gravity="center_vertical"
-                android:background="@drawable/setting_item_selector"
-                android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="10dp"
-                android:drawableRight="@mipmap/right"
-                android:text="心情" />
-            <include layout="@layout/line_h"></include>
-            <TextView
-                android:id="@+id/txt_selfdescribe"
-                android:textSize="13sp"
-                android:gravity="center_vertical"
-                android:background="@drawable/setting_item_selector"
-                android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="10dp"
-                android:drawableRight="@mipmap/right"
-                android:text="自我描述" />
-
-            <TextView
-                android:id="@+id/txt_phone"
-                android:textSize="13sp"
                 android:layout_marginTop="15dp"
-                android:gravity="center_vertical"
                 android:background="@drawable/setting_item_selector"
                 android:layout_width="fill_parent"
                 android:layout_height="40dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
                 android:drawableRight="@mipmap/right"
-                android:text="电话号码" />
+                android:text="清楚缓存" />
             <include layout="@layout/line_h"></include>
             <TextView
-                android:id="@+id/txt_email"
+                android:id="@+id/txt_feedback"
                 android:textSize="13sp"
                 android:gravity="center_vertical"
                 android:background="@drawable/setting_item_selector"
@@ -138,10 +90,10 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
                 android:drawableRight="@mipmap/right"
-                android:text="邮箱" />
+                android:text="意见反馈" />
             <include layout="@layout/line_h"></include>
             <TextView
-                android:id="@+id/txt_city"
+                android:id="@+id/txt_help"
                 android:textSize="13sp"
                 android:gravity="center_vertical"
                 android:background="@drawable/setting_item_selector"
@@ -150,47 +102,24 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
                 android:drawableRight="@mipmap/right"
-                android:text="所在城市" />
+                android:text="帮助" />
             <include layout="@layout/line_h"></include>
-            <TextView
-                android:id="@+id/txt_school"
-                android:textSize="13sp"
-                android:gravity="center_vertical"
-                android:background="@drawable/setting_item_selector"
-                android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="10dp"
-                android:drawableRight="@mipmap/right"
-                android:text="所在学校" />
-            <include layout="@layout/line_h"></include>
-            <TextView
-                android:id="@+id/txt_major"
-                android:textSize="13sp"
-                android:gravity="center_vertical"
-                android:background="@drawable/setting_item_selector"
-                android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="10dp"
-                android:drawableRight="@mipmap/right"
-                android:text="专业" />
 
             <TextView
-                android:id="@+id/txt_academic"
+                android:id="@+id/txt_servicephone"
                 android:textSize="13sp"
-                android:layout_marginTop="15dp"
                 android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/setting_item_selector"
                 android:layout_width="fill_parent"
                 android:layout_height="40dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
                 android:drawableRight="@mipmap/right"
-                android:text="学历" />
+                android:text="客服" />
             <include layout="@layout/line_h"></include>
             <TextView
-                android:id="@+id/txt_prize"
+                android:id="@+id/txt_version"
                 android:textSize="13sp"
                 android:gravity="center_vertical"
                 android:background="@drawable/setting_item_selector"
@@ -199,8 +128,31 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="10dp"
                 android:drawableRight="@mipmap/right"
-                android:text="荣誉奖项" />
+                android:text="当前版本" />
             <include layout="@layout/line_h"></include>
+            <TextView
+                android:id="@+id/txt_about"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+                android:background="@drawable/setting_item_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:drawableRight="@mipmap/right"
+                android:text="关于" />
+
+            <Button
+                android:id="@+id/btn_register1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/button_selector"
+                android:text="退出登入"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
         </LinearLayout>
 
 
