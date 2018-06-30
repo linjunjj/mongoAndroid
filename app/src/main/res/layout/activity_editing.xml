@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="@string/setting"
+            android:text="@string/editing"
             android:textColor="#000"
             android:textSize="18sp"/>
 
@@ -128,7 +128,18 @@
                 android:drawableRight="@mipmap/right"
                 android:text="电话号码" />
             <include layout="@layout/line_h"></include>
-
+            <TextView
+                android:id="@+id/txt_email"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+                android:background="@drawable/setting_item_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:drawableRight="@mipmap/right"
+                android:text="邮箱" />
+            <include layout="@layout/line_h"></include>
             <TextView
                 android:id="@+id/txt_city"
                 android:textSize="13sp"
@@ -153,19 +164,45 @@
                 android:drawableRight="@mipmap/right"
                 android:text="所在学校" />
             <include layout="@layout/line_h"></include>
+            <TextView
+                android:id="@+id/txt_major"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+                android:background="@drawable/setting_item_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:drawableRight="@mipmap/right"
+                android:text="专业" />
+
+            <TextView
+                android:id="@+id/txt_academic"
+                android:textSize="13sp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/setting_item_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:drawableRight="@mipmap/right"
+                android:text="学历" />
+            <include layout="@layout/line_h"></include>
+            <TextView
+                android:id="@+id/txt_prize"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+                android:background="@drawable/setting_item_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:drawableRight="@mipmap/right"
+                android:text="荣誉奖项" />
+            <include layout="@layout/line_h"></include>
         </LinearLayout>
-        <TextView
-            android:id="@+id/txt_"
-            android:textSize="13sp"
-            android:gravity="center_vertical"
-            android:background="@drawable/setting_item_selector"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="10dp"
-            android:drawableRight="@mipmap/right"
-            android:text="心情" />
-        <include layout="@layout/line_h"></include>
+
 
     </ScrollView>
 
