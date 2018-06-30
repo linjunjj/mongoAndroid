@@ -109,7 +109,6 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-
     <Button
         android:id="@+id/btn_register1"
         android:layout_width="match_parent"

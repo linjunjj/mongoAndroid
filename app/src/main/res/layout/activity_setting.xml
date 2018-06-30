@@ -20,7 +20,6 @@
             android:textColor="#000"
             android:textSize="18sp"/>
 
-
         <ImageView
             android:id="@+id/img_back"
             android:layout_width="wrap_content"
@@ -41,8 +40,19 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical">
-
-
+            <TextView
+                android:id="@+id/txt_usersafe"
+                style="@style/TxtTitle"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:background="@drawable/setting_item_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="20dp"
+                android:drawableRight="@drawable/right"
+                android:text="账号安全" />
 
 
         </LinearLayout>

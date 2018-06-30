@@ -78,4 +78,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'com.facebook.rebound:rebound:0.3.8'
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+
 }
