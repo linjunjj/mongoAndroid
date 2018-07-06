@@ -18,7 +18,6 @@ import java.util.concurrent.TimeUnit
 
 class WelcomeActivity : BaseActivity<BaseContract.BasePresenter>() {
 
-    //必应每日壁纸 来源于 https://www.dujin.org/fenxiang/jiaocheng/3618.html.
     private val picUrl = "http://api.dujin.org/bing/1920.php"
 
     private var mCompositeDisposable: CompositeDisposable? = CompositeDisposable()
