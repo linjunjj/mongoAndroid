@@ -19,36 +19,38 @@ public class BottomBarTab extends LinearLayout {
     private TextView mTextView;
     private int mTabPosition = -1;
     private int icon;
+    private  int ticon;
     private static boolean ifshow = false;
 
-    public BottomBarTab(Context context, @DrawableRes int icon, String title) {
-        this(context, null, icon,  title);
+    public BottomBarTab(Context context, @DrawableRes int icon,@DrawableRes int ticon , String title) {
+        this(context, null, icon, ticon , title);
     }
 
 
-    public BottomBarTab(Context context, AttributeSet attrs, int icon, String title) {
-        this(context, attrs, 0, icon, title);
+    public BottomBarTab(Context context, AttributeSet attrs, int icon, int ticon, String title) {
+        this(context, attrs, 0, icon,ticon, title);
     }
 
-    public BottomBarTab(Context context, AttributeSet attrs, int defStyleAttr, int icon, String title) {
+    public BottomBarTab(Context context, AttributeSet attrs, int defStyleAttr, int icon, int ticon, String title) {
         super(context, attrs, defStyleAttr);
-        init(context, icon, title);
+        init(context, icon,ticon, title);
     }
 
-    private void init(Context context, int icon, String title) {
+    private void init(Context context, int icon, int ticon, String title) {
         mContext = context;
         this.icon =icon;
+        this.ticon=ticon;
        /* TypedArray typedArray = context.obtainStyledAttributes(new int[]{R.attr.selectableItemBackgroundBorderless});
         Drawable drawable = typedArray.getDrawable(0);
         setBackgroundDrawable(drawable);
         typedArray.recycle();*/
-
         setOrientation(LinearLayout.VERTICAL);
         mIcon = new ImageView(context);
 //        int size = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20, getResources().getDisplayMetrics());
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         params.gravity = Gravity.CENTER_HORIZONTAL;
         params.topMargin = ContextUtils.dip2px(context, 4.5f);
+
         mIcon.setImageResource(icon);
         mIcon.setLayoutParams(params);
 
@@ -71,11 +73,11 @@ public class BottomBarTab extends LinearLayout {
     public void setSelected(boolean selected) {
         super.setSelected(selected);
         if (selected) {
-            mIcon.setColorFilter(ContextCompat.getColor(mContext, R.color.tabcolor));
+            mIcon.setImageResource(ticon);
             mTextView.setTextColor(ContextCompat.getColor(mContext, R.color.tabcolor));
 
         } else {
-            mIcon.setColorFilter(ContextCompat.getColor(mContext, R.color.tab_unselect));
+            mIcon.setImageResource(icon);
             mTextView.setTextColor(ContextCompat.getColor(mContext, R.color.tab_unselect));
         }
     }

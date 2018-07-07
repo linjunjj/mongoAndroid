@@ -76,21 +76,21 @@ public class BottomBar extends LinearLayout {
 
      public BottomBar addCenterItem(final  BottomBarCenterTab tab){
 
-         tab.setOnClickListener(new OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 if (mListener == null) return;
-
-                 int pos = tab.getTabPosition();
-                 System.out.println(pos);
-                     mListener.onTabSelected(pos, mCurrentPosition);
-                     tab.setSelected(false);
-                     mListener.onTabUnselected(mCurrentPosition);
-                     mTabLayout.getChildAt(mCurrentPosition).setSelected(true);
-
-             }
-         });
-         tab.setTabPosition(2);
+//         tab.setOnClickListener(new OnClickListener() {
+//             @Override
+//             public void onClick(View v) {
+//                 if (mListener == null) return;
+//
+////                 int pos = tab.getTabPosition();
+////                 System.out.println(pos);
+////                     mListener.onTabSelected(pos, mCurrentPosition);
+//                     tab.setSelected(false);
+//                     mListener.onTabUnselected(mCurrentPosition);
+//                     mTabLayout.getChildAt(mCurrentPosition).setSelected(true);
+//
+//             }
+//         });
+//         tab.setTabPosition(2);
          tab.setLayoutParams(mTabParams);
          mTabLayout.addView(tab);
          return this;

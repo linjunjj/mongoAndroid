@@ -46,18 +46,18 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
             mFragments[3] = findFragment(PersonalFragment::class.java)
             mFragments[4] = findFragment(PersonalFragment::class.java)
         }
-        mBootomBar.addItem(BottomBarTab(this, R.drawable.home, "首页"),0)
-        mBootomBar.addItem(BottomBarTab(this, R.drawable.find, "发现"),1)
-        mBootomBar.addCenterItem(BottomBarCenterTab(this,R.drawable.tabbar_compose_icon_add))
-        mBootomBar.addItem(BottomBarTab(this, R.drawable.message, "消息"),3)
-        mBootomBar.addItem(BottomBarTab(this, R.drawable.me, "我的"),4)
+        mBootomBar.addItem(BottomBarTab(this, R.drawable.home,R.drawable.press_home ,"首页"),0)
+        mBootomBar.addItem(BottomBarTab(this, R.drawable.find,R.drawable.press_find, "发现"),1)
+        mBootomBar.addCenterItem(BottomBarCenterTab(this,0,null))
+        mBootomBar.addItem(BottomBarTab(this, R.drawable.message,R.drawable.press_message, "消息"),3)
+        mBootomBar.addItem(BottomBarTab(this, R.drawable.me,R.drawable.press_me, "我的"),4)
         mPopMenu = PopMenu.Builder().attachToActivity(this@MainActivity)
-                .addMenuItem(PopMenuItem("文字", resources.getDrawable(R.drawable.tabbar_compose_idea)))
-                .addMenuItem(PopMenuItem("照片/视频",resources.getDrawable(R.drawable.tabbar_compose_idea)))
-                .addMenuItem(PopMenuItem("头条文章", resources.getDrawable(R.drawable.tabbar_compose_idea)))
-                .addMenuItem(PopMenuItem("签到", resources.getDrawable(R.drawable.tabbar_compose_idea)))
-                .addMenuItem(PopMenuItem("点评", resources.getDrawable(R.drawable.tabbar_compose_idea)))
-                .addMenuItem(PopMenuItem("更多", resources.getDrawable(R.drawable.tabbar_compose_idea)))
+                .addMenuItem(PopMenuItem("发布跑腿", resources.getDrawable(R.drawable.tabbar_release_task)))
+                .addMenuItem(PopMenuItem("发布动态",resources.getDrawable(R.drawable.tabbar_release_dynamic)))
+                .addMenuItem(PopMenuItem("发布闲置", resources.getDrawable(R.drawable.tabbar_release_idle)))
+                .addMenuItem(PopMenuItem("发布需求", resources.getDrawable(R.drawable.tabbar_release_need)))
+                .addMenuItem(PopMenuItem("发布活动", resources.getDrawable(R.drawable.tabbar_release_activity)))
+                .addMenuItem(PopMenuItem("发布技能", resources.getDrawable(R.drawable.tabbar_release_skill)))
                 .setOnItemClickListener(object : PopMenuItemListener {
                     override fun onItemClick(popMenu: PopMenu, position: Int) {
                         Toast.makeText(this@MainActivity, "你点击了第" + position + "个位置", Toast.LENGTH_SHORT).show()
@@ -65,17 +65,15 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
                 })
                 .build()
 
+
         mBootomBar.setOnTabSelectedListener(object : BottomBar.OnTabSelectedListener  {
             override fun onTabSelected(position: Int, prePosition: Int) {
                if(position==2){
 
-                   if (!mPopMenu?.isShowing()!!) {
-                       mPopMenu?.show()
-                   }
-                   System.out.println(position)
                }else{
                    supportDelegate.showHideFragment(mFragments[position], mFragments[prePosition])
                }
+
             }
             override fun onTabUnselected(position: Int) {
 
@@ -88,8 +86,13 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
 
 
 
+    }
 
 
+    fun onClickPublish(v: View) {
+        if (!mPopMenu?.isShowing()!!) {
+                       mPopMenu?.show()
+                   }
     }
 
     override fun initData() {

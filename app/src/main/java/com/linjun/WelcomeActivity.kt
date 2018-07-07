@@ -15,9 +15,13 @@ import io.reactivex.observers.DisposableObserver
 import kotlinx.android.synthetic.main.activity_welcome.*
 import pl.droidsonroids.gif.GifDrawable
 import java.util.concurrent.TimeUnit
+import com.linjun.widget.shimmer.Shimmer
+import com.linjun.widget.shimmer.ShimmerTextView
+
+
 
 class WelcomeActivity : BaseActivity<BaseContract.BasePresenter>() {
-
+    var shimmer: Shimmer? = null
     private val picUrl = "http://api.dujin.org/bing/1920.php"
 
     private var mCompositeDisposable: CompositeDisposable? = CompositeDisposable()
@@ -47,6 +51,8 @@ class WelcomeActivity : BaseActivity<BaseContract.BasePresenter>() {
                         toMain()
                     }
                 }))
+        shimmer = Shimmer()
+        shimmer!!.start(tv_logo)
         fl_ad.setOnClickListener { toMain() }
     }
 
