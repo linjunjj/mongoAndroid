@@ -24,6 +24,13 @@
              android:layout_height="match_parent"
              android:layout_weight="1"
              android:background="@color/white"
+             app:tabTextAppearance="@style/TabLayoutTextAppearance"
+             app:tabTextColor="@color/black"
+             app:tabSelectedTextColor="@color/bg_red_color"
+             app:tabIndicatorHeight="3dp"
+             app:tabIndicatorColor="@color/bg_red_color"
+             app:tabMode="scrollable"
+             app:tabMinWidth="60dp"
               />
          <ImageView
              android:id="@+id/btnMore"
@@ -37,7 +44,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
          />
-
 </android.support.design.widget.CoordinatorLayout>
 
 
