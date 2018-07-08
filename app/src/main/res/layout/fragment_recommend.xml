@@ -9,15 +9,87 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <FrameLayout
+
+
+        <LinearLayout
             android:id="@+id/container"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <include layout="@layout/banner"/>
+            <include layout="@layout/line_h"/>
+            <include layout="@layout/home_new"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/recomment_master_tv"
+                    android:background="@color/bg_red_color"/>
+
+                <TextView
+                    android:id="@+id/recomment_master_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="推荐"
+                    android:textColor="@color/textColor1"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/recomment_master_tv"
+                    android:background="@color/bg_red_color"/>
+
+
+            </RelativeLayout>
+            <include layout="@layout/home_header"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/recomment_tv"
+                    android:background="@color/bg_red_color"/>
+
+                <TextView
+                    android:id="@+id/recomment_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="新鲜的"
+                    android:textColor="@color/textColor1"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/recomment_tv"
+                    android:background="@color/bg_red_color"/>
+
+
+            </RelativeLayout>
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/list"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </FrameLayout>
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout>
