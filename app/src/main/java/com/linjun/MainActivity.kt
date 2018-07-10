@@ -8,6 +8,8 @@ import com.linjun.model.PopMenuItem
 import com.linjun.ui.base.BaseActivity
 import com.linjun.ui.base.BaseContract
 import com.linjun.ui.base.SupportFragment
+import com.linjun.ui.home.HomeFragment
+import com.linjun.ui.home.fragment.HomeRecommendFragment
 import com.linjun.ui.personal.PersonalFragment
 import com.linjun.utils.StatusBarUtil
 import com.linjun.widget.BottomBar
@@ -30,7 +32,7 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
     override fun bindView(view: View, savedInstanceState: Bundle?) {
         StatusBarUtil.setTranslucentForImageViewInFragment(this@MainActivity, 0, null)
         if (savedInstanceState==null){
-           mFragments[0]=PersonalFragment.newInstance()
+           mFragments[0]=HomeFragment.newInstance()
             mFragments[1]=PersonalFragment.newInstance()
             mFragments[3]=PersonalFragment.newInstance()
             mFragments[4]=PersonalFragment.newInstance()
@@ -41,7 +43,7 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
                     mFragments[3],
                     mFragments[4])
         }else{
-            mFragments[0] = findFragment(PersonalFragment::class.java)
+            mFragments[0] = findFragment(HomeRecommendFragment::class.java)
             mFragments[1] = findFragment(PersonalFragment::class.java)
             mFragments[3] = findFragment(PersonalFragment::class.java)
             mFragments[4] = findFragment(PersonalFragment::class.java)

@@ -18,26 +18,21 @@ import com.linjun.R
 import com.linjun.R.id.convenientBanner
 import com.linjun.bean.RecommendBean
 import com.linjun.component.ApplicationComponent
-import com.linjun.component.DaggerHttpComponent
 import com.linjun.ui.base.BaseContract
 import com.linjun.ui.base.BaseFragment
+import com.linjun.ui.home.HomeFragment
 import com.linjun.widget.SimpleMultiStateView
 import kotlinx.android.synthetic.main.banner.*
 import kotlinx.android.synthetic.main.fragment_recommend.*
 
 @SuppressLint("ValidFragment")
-class HomeRecommendFragment constructor
-(private  val mAdapter: BaseQuickAdapter<in RecommendBean,BaseViewHolder>):BaseFragment<BaseContract.BasePresenter>(),BaseContract.BaseView{
-    private var pageNum =1
-    private  lateinit var type : String
+class HomeRecommendFragment :BaseFragment<BaseContract.BasePresenter>(),BaseContract.BaseView{
 
-    private val listBanner ={"f"}
 
     companion object {
-        fun newInstance(type:String,baseQuickAdapter: BaseQuickAdapter<in RecommendBean,BaseViewHolder>):HomeRecommendFragment{
-            val args=Bundle()
-            args.putCharSequence("type",type)
-            val fragment =HomeRecommendFragment(baseQuickAdapter)
+        fun newInstance(): HomeRecommendFragment {
+            val  args =Bundle()
+            val fragment= HomeRecommendFragment()
             fragment.arguments=args
             return fragment
         }
@@ -48,55 +43,25 @@ class HomeRecommendFragment constructor
     }
 
     override fun getSimpleMultiStateView(): SimpleMultiStateView? {
-        return simpleMultiStateView
+        return null
     }
 
     override fun initInjector(appComponent: ApplicationComponent) {
-         DaggerHttpComponent.builder()
-                 .applicationComponent(appComponent)
-                 .build()
-                 .inject(this)
+//         DaggerHttpComponent.builder()
+//                 .applicationComponent(appComponent)
+//                 .build()
+//                 .inject(this)
     }
 
     override fun bindView(view: View, savedInstanceState: Bundle?) {
 
 
-
-        convenientBanner.setPages(object : CBViewHolderCreator {
-            override fun createHolder(): Holder<String> {
-                return ImageHolder()
-            }
-        }, listBanner)
-                .setPageIndicator(intArrayOf(R.drawable.ic_dot_normal, R.drawable.ic_dot_pressed))
-                .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL)
-
-        if (!convenientBanner.isTurning) {
-            convenientBanner.startTurning(4000)
-        }
-
-        layout_refresh.disableWhenHorizontalMove(true)
-        layout_refresh.setPtrHandler(object : PtrHandler {
-            override fun checkCanDoRefresh(frame: PtrFrameLayout, content: View, header: View): Boolean {
-                return false
-            }
-
-            override fun onRefreshBegin(frame: PtrFrameLayout) {
-                pageNum = 1
-
-
-            }
-        })
     }
 
 
 
 
-
-
-    override fun initData() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
+    override fun initData() {}
 
 
 }

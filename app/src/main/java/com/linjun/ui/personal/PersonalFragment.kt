@@ -26,7 +26,6 @@ class PersonalFragment : BaseFragment<BasePresenter<BaseContract.BaseView>>() {
             return fragment
         }
     }
-
     override fun getSimpleMultiStateView(): SimpleMultiStateView? = null
 
     override fun initInjector(appComponent: ApplicationComponent) {}
@@ -36,8 +35,6 @@ class PersonalFragment : BaseFragment<BasePresenter<BaseContract.BaseView>>() {
     override fun initData() {}
 
     override fun bindView(view: View, savedInstanceState: Bundle?) {
-
-
 
     }
 

@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-<com.linjun.widget.SimpleMultiStateView
+<android.support.v4.widget.SwipeRefreshLayout
     android:layout_width="match_parent"
     android:id="@+id/simpleMultiStateView"
     android:layout_height="wrap_content">
@@ -19,7 +19,6 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <include layout="@layout/banner"/>
             <include layout="@layout/line_h"/>
             <include layout="@layout/home_new"/>
             <RelativeLayout
@@ -93,7 +92,7 @@
                 android:layout_height="match_parent"
                 />
         </LinearLayout>
-</com.linjun.widget.SimpleMultiStateView>
+</android.support.v4.widget.SwipeRefreshLayout>
     </in.srain.cube.views.ptr.PtrClassicFrameLayout>
 
 </FrameLayout>

@@ -1,7 +1,6 @@
 package com.linjun.component
 
 
-import com.linjun.ui.home.fragment.HomeRecommendFragment
 import dagger.Component
 
 /**
@@ -11,6 +10,5 @@ import dagger.Component
  */
 @Component(dependencies = [(ApplicationComponent::class)])
 interface HttpComponent {
-  fun inject(homeRecommentFragment : HomeRecommendFragment)
 
 }

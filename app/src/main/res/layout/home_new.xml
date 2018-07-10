@@ -34,12 +34,12 @@
             android:orientation="horizontal">
 
 
-            <com.sunfusheng.marqueeview.MarqueeView
-                android:id="@+id/marqueeView1"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_marginLeft="6dp"
-                />
+            <!--<com.sunfusheng.marqueeview.MarqueeView-->
+                <!--android:id="@+id/marqueeView1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_marginLeft="6dp"-->
+                <!--/>-->
         </LinearLayout>
 
 
