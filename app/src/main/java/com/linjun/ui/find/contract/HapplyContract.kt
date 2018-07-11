@@ -3,12 +3,6 @@ package com.linjun.ui.find.contract
 import com.linjun.bean.HappyBean
 import com.linjun.ui.base.BaseContract
 
-package com.will.weiyuekotlin.ui.jandan.contract
-
-import com.will.weiyuekotlin.bean.FreshNewsBean
-import com.will.weiyuekotlin.bean.JdDetailBean
-import com.will.weiyuekotlin.ui.base.BaseContract
-
 /**
  * desc: .
  * author: Will .
@@ -47,12 +41,7 @@ interface HapplyContract {
          */
         fun getData(type: String, page: Int)
 
-        /**
-         * 获取新鲜事数据
-         *
-         * @param page 页码
-         */
-        fun getFreshNews(page: Int)
+
 
         /**
          * 获取无聊图、妹子图、段子列表
