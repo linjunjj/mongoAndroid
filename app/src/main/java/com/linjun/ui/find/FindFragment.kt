@@ -1,22 +1,23 @@
 package com.linjun.ui.find
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
 import android.support.v4.view.PagerAdapter
 import android.view.View
-import android.widget.TextView
+import com.chad.library.adapter.base.BaseQuickAdapter
+import com.chad.library.adapter.base.BaseViewHolder
 import com.linjun.R
+import com.linjun.bean.JdBaseBean
 import com.linjun.component.ApplicationComponent
+import com.linjun.net.FindApi
+import com.linjun.ui.apdater.FreshNewsAdapter
 import com.linjun.ui.base.BaseContract
 import com.linjun.ui.base.BaseFragment
 import com.linjun.ui.base.BasePresenter
-import com.linjun.ui.home.HomeFragment
+import com.linjun.ui.find.fragment.HapplyFragment
 import com.linjun.ui.home.fragment.HomeRecommendFragment
-import com.linjun.ui.personal.PersonalFragment
 import com.linjun.widget.SimpleMultiStateView
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -60,6 +61,9 @@ class FindFragment  : BaseFragment<BasePresenter<BaseContract.BaseView>>() {
             when(position){
                 0->return HomeRecommendFragment.newInstance()
                 1->return HomeRecommendFragment.newInstance()
+                2->return HomeRecommendFragment.newInstance()
+                3 ->return HapplyFragment.newInstance(FindApi.TYPE_BORED, FreshNewsAdapter(activity, null) as BaseQuickAdapter<in JdBaseBean
+                        , BaseViewHolder>)
 
 
             }

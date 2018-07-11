@@ -7,7 +7,7 @@ import com.chad.library.adapter.base.entity.MultiItemEntity
  * author: Will .
  * date: 2017/9/27 .
  */
-open class HappyBean {
+ class HappyBean {
 
     /**
      * status : ok
@@ -25,7 +25,7 @@ open class HappyBean {
     var count: Int = 0
     var comments: List<CommentsBean>? = null
 
-    class CommentsBean :HappyBean(), MultiItemEntity {
+    class CommentsBean :JdBaseBean(), MultiItemEntity {
 
         /**
          * comment_ID : 3519034

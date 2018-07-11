@@ -11,13 +11,19 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.linjun.R
 import com.linjun.bean.HappyBean
+import com.linjun.bean.JdBaseBean
+import com.linjun.component.ApplicationComponent
+import com.linjun.component.DaggerHttpComponent
 import com.linjun.ui.base.BaseFragment
 import com.linjun.ui.find.contract.HapplyContract
 import com.linjun.ui.find.presenter.HapplyPresenter
+import com.linjun.widget.CustomLoadMoreView
+import com.linjun.widget.SimpleMultiStateView
+import kotlinx.android.synthetic.main.fragment_jd_detail.*
 
 @SuppressLint("ValidFragment")
-class HapplyFragment constructor
-(private val mAdapter: BaseQuickAdapter<in HappyBean, BaseViewHolder>) : BaseFragment<HapplyPresenter>(), HapplyContract.View {
+class HapplyFragment
+(private val mAdapter: BaseQuickAdapter<in JdBaseBean, BaseViewHolder>) : BaseFragment<HapplyPresenter>(), HapplyContract.View {
     private var pageNum = 1
 
     /**
@@ -27,7 +33,7 @@ class HapplyFragment constructor
     private lateinit var type: String
 
     companion object {
-        fun newInstance(type: String, baseQuickAdapter: BaseQuickAdapter<in HappyBean, BaseViewHolder>): HapplyFragment {
+        fun newInstance(type: String, baseQuickAdapter: BaseQuickAdapter<in JdBaseBean, BaseViewHolder>): HapplyFragment {
             val args = Bundle()
             args.putCharSequence("type", type)
             val fragment = HapplyFragment(baseQuickAdapter)
@@ -38,7 +44,7 @@ class HapplyFragment constructor
 
     override fun getContentLayout(): Int = R.layout.fragment_jd_detail
 
-    override fun getSimpleMultiStateView(): SimpleMultiStateView? = simpleMultiStateView
+    override fun getSimpleMultiStateView(): SimpleMultiStateView? = null
 
     override fun initInjector(appComponent: ApplicationComponent) {
         DaggerHttpComponent.builder()
@@ -69,9 +75,7 @@ class HapplyFragment constructor
         mAdapter.openLoadAnimation(BaseQuickAdapter.ALPHAIN)
         mAdapter.setOnLoadMoreListener({ mPresenter?.getData(type, pageNum) }, recyclerView)
         mAdapter.setOnItemClickListener { adapter, view, position ->
-            if (type == JanDanApi.TYPE_FRESH) {
-                ReadActivity.launch(activity, adapter.getItem(position) as FreshNewsBean.PostsBean)
-            }
+
         }
     }
 
@@ -86,36 +90,8 @@ class HapplyFragment constructor
      *
      * @param freshNewsBean 新鲜事列表
      */
-    override fun loadFreshNews(freshNewsBean: FreshNewsBean?) {
-        when (freshNewsBean) {
-            null -> {
-                ptrFrameLayout.refreshComplete()
-                showError()
-            }
-            else -> {
-                pageNum++
-                mAdapter.setNewData(freshNewsBean.posts)
-                ptrFrameLayout.refreshComplete()
-                showSuccess()
-            }
-        }
-    }
 
-    /**
-     * 加载更多新鲜事列表
-     *
-     * @param freshNewsBean 新鲜事列表
-     */
-    override fun loadMoreFreshNews(freshNewsBean: FreshNewsBean?) {
-        when (freshNewsBean) {
-            null -> mAdapter.loadMoreFail()
-            else -> {
-                pageNum++
-                mAdapter.addData(freshNewsBean.posts!!)
-                mAdapter.loadMoreComplete()
-            }
-        }
-    }
+
 
     /**
      * 加载 无聊图、妹子图、段子列表
@@ -123,15 +99,15 @@ class HapplyFragment constructor
      * @param type  [com.will.weiyuekotlin.net.JanDanApi.Type]
      * @param jdDetailBean 数据列表
      */
-    override fun loadDetailData(type: String, jdDetailBean: JdDetailBean?) {
-        when (jdDetailBean) {
+    override fun loadDetailData(type: String, happyBean: HappyBean?) {
+        when (happyBean) {
             null -> {
                 ptrFrameLayout.refreshComplete()
                 showError()
             }
             else -> {
                 pageNum++
-                mAdapter.setNewData(jdDetailBean.comments)
+                mAdapter.setNewData(happyBean.comments)
                 ptrFrameLayout.refreshComplete()
                 showSuccess()
             }
@@ -144,12 +120,12 @@ class HapplyFragment constructor
      * @param type  [com.will.weiyuekotlin.net.JanDanApi.Type]
      * @param jdDetailBean 数据列表
      */
-    override fun loadMoreDetailData(type: String, jdDetailBean: JdDetailBean?) {
-        when (jdDetailBean) {
+    override fun loadMoreDetailData(type: String, happyBean: HappyBean?) {
+        when (happyBean) {
             null -> mAdapter.loadMoreFail()
             else -> {
                 pageNum++
-                mAdapter.addData(jdDetailBean.comments!!)
+                mAdapter.addData(happyBean.comments!!)
                 mAdapter.loadMoreComplete()
             }
         }
