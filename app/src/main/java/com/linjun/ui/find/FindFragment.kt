@@ -62,6 +62,7 @@ class FindFragment  : BaseFragment<BasePresenter<BaseContract.BaseView>>() {
                 0->return HomeRecommendFragment.newInstance()
                 1->return HomeRecommendFragment.newInstance()
                 2->return HomeRecommendFragment.newInstance()
+
                 3 ->return HapplyFragment.newInstance(FindApi.TYPE_BORED, FreshNewsAdapter(activity, null) as BaseQuickAdapter<in JdBaseBean
                         , BaseViewHolder>)
 

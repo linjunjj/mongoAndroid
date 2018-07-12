@@ -44,7 +44,7 @@ class HapplyFragment
 
     override fun getContentLayout(): Int = R.layout.fragment_jd_detail
 
-    override fun getSimpleMultiStateView(): SimpleMultiStateView? = null
+    override fun getSimpleMultiStateView(): SimpleMultiStateView? =simpleMultiStateView
 
     override fun initInjector(appComponent: ApplicationComponent) {
         DaggerHttpComponent.builder()

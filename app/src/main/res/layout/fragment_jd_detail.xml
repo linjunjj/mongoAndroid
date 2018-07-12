@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true">
 
-        <com.will.weiyuekotlin.widget.SimpleMultiStateView
+        <com.linjun.widget.SimpleMultiStateView
             android:id="@+id/simpleMultiStateView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -27,7 +27,7 @@
                 android:scrollbars="vertical"
                 />
 
-        </com.will.weiyuekotlin.widget.SimpleMultiStateView>
+        </com.linjun.widget.SimpleMultiStateView>
 
     </in.srain.cube.views.ptr.PtrClassicFrameLayout>
 </FrameLayout>
