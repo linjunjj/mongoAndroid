@@ -27,4 +27,6 @@
     <color name="line_bg">#e5e5e5</color>
     <color name="third_party_text_color">#999999</color>
       <color name="black">#ffeeee</color>
+    <color name="tab_text_normal">#212121</color>
+
 </resources>
