@@ -52,7 +52,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-       <activity android:name=".ui.testfind.ReadActivity"></activity>
+       <activity android:name=".ui.find.activity.ImageBrowseActivity"></activity>
         <activity
             android:windowSoftInputMode="stateAlwaysHidden"
             android:name=".MainActivity"

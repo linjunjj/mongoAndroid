@@ -1,7 +1,7 @@
 package com.linjun.component
 
 
-import com.linjun.ui.testfind.JdDetailFragment
+import com.linjun.ui.find.fragment.JdDetailFragment
 import dagger.Component
 
 /**

@@ -56,10 +56,10 @@ class JdDetailFragment constructor
     override fun getSimpleMultiStateView(): SimpleMultiStateView? = simpleMultiStateViews
 
     override fun initInjector(appComponent: ApplicationComponent) {
-//        DaggerHttpComponent.builder()
-//                .applicationComponent(appComponent)
-//                .build()
-//                .inject(this)
+        DaggerHttpComponent.builder()
+                .applicationComponent(appComponent)
+                .build()
+                .inject(this)
     }
 
     override fun bindView(view: View, savedInstanceState: Bundle?) {

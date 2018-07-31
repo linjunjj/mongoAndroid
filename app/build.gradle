@@ -44,7 +44,6 @@ dependencies {
     implementation rootProject.ext.dependencies["dagger"]
     implementation rootProject.ext.dependencies["dagger-support"]
     kapt rootProject.ext.dependencies["dagger-compiler"]
-
     implementation rootProject.ext.dependencies["rxjava"]
     implementation rootProject.ext.dependencies["rxandroid"]
     implementation rootProject.ext.dependencies["rxbinding2"]
