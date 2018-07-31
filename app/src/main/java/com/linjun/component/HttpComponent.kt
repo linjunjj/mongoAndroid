@@ -1,7 +1,7 @@
 package com.linjun.component
 
 
-import com.linjun.ui.find.fragment.HapplyFragment
+import com.linjun.ui.testfind.JdDetailFragment
 import dagger.Component
 
 /**
@@ -11,5 +11,8 @@ import dagger.Component
  */
 @Component(dependencies = [(ApplicationComponent::class)])
 interface HttpComponent {
-    fun inject(happlyFragment: HapplyFragment)
+//    fun inject(happlyFragment: HapplyFragment)
+//    fun  inject(jdDetailFragment: JdDetailFragment )
+fun inject(jdDetailFragment: JdDetailFragment)
+
 }

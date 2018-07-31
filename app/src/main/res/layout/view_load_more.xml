@@ -13,15 +13,10 @@
         >
 
         <com.airbnb.lottie.LottieAnimationView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/animation_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_fileName="anim/loading_.json"
-            app:lottie_scale="1"
             />
     </RelativeLayout>
 

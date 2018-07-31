@@ -46,7 +46,6 @@ public class BottomBar extends LinearLayout {
 //        mTabLayout.setBackgroundColor(Color.GREEN);
         mTabLayout.setOrientation(LinearLayout.HORIZONTAL);
         addView(mTabLayout, new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-
         mTabParams = new LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
         mTabParams.weight = 1;
     }

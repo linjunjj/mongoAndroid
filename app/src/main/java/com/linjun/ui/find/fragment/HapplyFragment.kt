@@ -13,7 +13,6 @@ import com.linjun.R
 import com.linjun.bean.HappyBean
 import com.linjun.bean.JdBaseBean
 import com.linjun.component.ApplicationComponent
-import com.linjun.component.DaggerHttpComponent
 import com.linjun.ui.base.BaseFragment
 import com.linjun.ui.find.contract.HapplyContract
 import com.linjun.ui.find.presenter.HapplyPresenter
@@ -44,13 +43,13 @@ class HapplyFragment
 
     override fun getContentLayout(): Int = R.layout.fragment_jd_detail
 
-    override fun getSimpleMultiStateView(): SimpleMultiStateView? =simpleMultiStateView
+    override fun getSimpleMultiStateView(): SimpleMultiStateView? =simpleMultiStateViews
 
     override fun initInjector(appComponent: ApplicationComponent) {
-        DaggerHttpComponent.builder()
-                .applicationComponent(appComponent)
-                .build()
-                .inject(this)
+//        DaggerHttpComponent.builder()
+//                .applicationComponent(appComponent)
+//                .build()
+//                .inject(this)
     }
 
     override fun bindView(view: View, savedInstanceState: Bundle?) {

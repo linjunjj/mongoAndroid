@@ -17,7 +17,6 @@
         android:layout_alignParentBottom="true"
         />
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="76.0dip"
@@ -34,7 +33,6 @@
             android:src="@mipmap/comui_tab_post"
             android:contentDescription="发布" />
     </LinearLayout>
-
     <FrameLayout
         android:id="@+id/main_container"
         android:layout_width="match_parent"

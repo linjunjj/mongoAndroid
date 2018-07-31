@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import com.linjun.MyApp
 import com.linjun.R
 import com.linjun.ui.listener.IBase
+import com.linjun.utils.toast
 import com.linjun.widget.SimpleMultiStateView
 import com.trello.rxlifecycle2.LifecycleTransformer
 
@@ -91,7 +92,7 @@ abstract class BaseFragment<T1 : BaseContract.BasePresenter> : SupportFragment()
     }
 
     protected fun toast(string: String) {
-        com.linjun.utils.toast(activity,string)
+        toast(activity, string)
     }
 
     override fun <T> bindToLife(): LifecycleTransformer<T> {
@@ -103,3 +104,4 @@ abstract class BaseFragment<T1 : BaseContract.BasePresenter> : SupportFragment()
         mPresenter?.detachView()
     }
 }
+

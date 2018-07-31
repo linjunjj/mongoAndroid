@@ -105,13 +105,14 @@ fun date2HHmm(date: Date): String {
 }
 
 
-fun  stirng2Date(str:String,format:String): Date {
+fun string2Date(str: String, format: String): Date {
     try {
         return SimpleDateFormat(format).parse(str)
-
-    }catch (e:ParseException){
-    e.printStackTrace()
+    } catch (e: ParseException) {
+        e.printStackTrace()
     }
+
     return Date()
 }
+
 

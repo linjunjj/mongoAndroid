@@ -1,10 +1,7 @@
 package com.linjun.module
 
 import com.linjun.MyApp
-import com.linjun.net.ApiConstants
-import com.linjun.net.FindApi
-import com.linjun.net.FindApiService
-import com.linjun.net.RetrofitConfig
+import com.linjun.net.*
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
@@ -41,5 +38,18 @@ class HttpModule {
                 .baseUrl(ApiConstants.sHapplyApi)
                 .build().create(FindApiService::class.java))
     }
+    @Provides
+    internal fun provideJanDanApis(builder: OkHttpClient.Builder): JanDanApi {
+
+        val retrofitBuilder = Retrofit.Builder()
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .client(builder.build())
+
+        return JanDanApi.getInstance(retrofitBuilder
+                .baseUrl(ApiConstants.sJanDanApi)
+                .build().create(JanDanApiService::class.java))
+    }
+
 
 }

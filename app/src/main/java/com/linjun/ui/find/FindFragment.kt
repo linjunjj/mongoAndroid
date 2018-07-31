@@ -12,14 +12,14 @@ import com.linjun.R
 import com.linjun.bean.JdBaseBean
 import com.linjun.component.ApplicationComponent
 import com.linjun.net.FindApi
-import com.linjun.ui.apdater.FreshNewsAdapter
+import com.linjun.ui.apdater.BoredPicAdapter
 import com.linjun.ui.base.BaseContract
 import com.linjun.ui.base.BaseFragment
 import com.linjun.ui.base.BasePresenter
-import com.linjun.ui.find.fragment.HapplyFragment
+import com.linjun.ui.find.fragment.JdDetailFragment
 import com.linjun.ui.home.fragment.HomeRecommendFragment
 import com.linjun.widget.SimpleMultiStateView
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_find.*
 
 class FindFragment  : BaseFragment<BasePresenter<BaseContract.BaseView>>() {
     private var mFindFragmentAdapter : FindFragmentAdapter?=null
@@ -62,8 +62,7 @@ class FindFragment  : BaseFragment<BasePresenter<BaseContract.BaseView>>() {
                 0->return HomeRecommendFragment.newInstance()
                 1->return HomeRecommendFragment.newInstance()
                 2->return HomeRecommendFragment.newInstance()
-
-                3 ->return HapplyFragment.newInstance(FindApi.TYPE_BORED, FreshNewsAdapter(activity, null) as BaseQuickAdapter<in JdBaseBean
+                3 ->return JdDetailFragment.newInstance(FindApi.TYPE_BORED, BoredPicAdapter(activity, null) as BaseQuickAdapter<in JdBaseBean
                         , BaseViewHolder>)
 
 

@@ -12,6 +12,7 @@ import com.linjun.ui.find.FindFragment
 import com.linjun.ui.home.HomeFragment
 import com.linjun.ui.home.fragment.HomeRecommendFragment
 import com.linjun.ui.personal.PersonalFragment
+import com.linjun.ui.testfind.JanDanFragment
 import com.linjun.utils.StatusBarUtil
 import com.linjun.widget.BottomBar
 import com.linjun.widget.BottomBarCenterTab
@@ -34,7 +35,7 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
         StatusBarUtil.setTranslucentForImageViewInFragment(this@MainActivity, 0, null)
         if (savedInstanceState==null){
            mFragments[0]=HomeFragment.newInstance()
-            mFragments[1]=FindFragment.newInstance()
+            mFragments[1]=JanDanFragment.newInstance()
             mFragments[3]=PersonalFragment.newInstance()
             mFragments[4]=PersonalFragment.newInstance()
 
@@ -45,7 +46,7 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
                     mFragments[4])
         }else{
             mFragments[0] = findFragment(HomeRecommendFragment::class.java)
-            mFragments[1] = findFragment(FindFragment::class.java)
+            mFragments[1] = findFragment(JanDanFragment::class.java)
             mFragments[3] = findFragment(PersonalFragment::class.java)
             mFragments[4] = findFragment(PersonalFragment::class.java)
         }
@@ -86,8 +87,6 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
             }
 
         })
-
-
 
     }
 
