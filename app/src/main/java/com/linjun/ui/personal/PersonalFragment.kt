@@ -38,14 +38,4 @@ class PersonalFragment : BaseFragment<BasePresenter<BaseContract.BaseView>>() {
 
     }
 
-    private fun setFont(vararg view: TextView) {
-
-    }
-
-    private fun toWeb(url: String) {
-        val webUrl = Uri.parse(url)
-        val webIntent = Intent(Intent.ACTION_VIEW, webUrl)
-        activity.startActivity(webIntent)
-    }
-
 }

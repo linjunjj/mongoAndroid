@@ -37,25 +37,32 @@ public class BottomBarCenterTab extends LinearLayout {
     }
 
     private void init(Context context, int icon,String title) {
-             mContext=context;
-             this.icon=icon;
-             mIcon=new ImageView(context);
-             LayoutParams iconParams=new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-             iconParams.gravity = Gravity.CENTER_HORIZONTAL;
-            iconParams.topMargin = ContextUtils.dip2px(context, 4.5f);
-             mIcon.setImageResource(icon);
-             mIcon.setLayoutParams(iconParams);
-             mIcon.setVisibility(View.INVISIBLE);
-            addView(mIcon);
-        mTextView = new TextView(context);
-        LayoutParams textViewParams=new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-        textViewParams.topMargin = ContextUtils.dip2px(context, 2.5f);
+        this.icon =icon;
+       /* TypedArray typedArray = context.obtainStyledAttributes(new int[]{R.attr.selectableItemBackgroundBorderless});
+        Drawable drawable = typedArray.getDrawable(0);
+        setBackgroundDrawable(drawable);
+        typedArray.recycle();*/
+        setOrientation(LinearLayout.VERTICAL);
+        mIcon = new ImageView(context);
+//        int size = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20, getResources().getDisplayMetrics());
+        LayoutParams params = new LayoutParams(72, 72);
+        params.gravity = Gravity.CENTER_HORIZONTAL;
+        params.topMargin = ContextUtils.dip2px(context, 2.5f);
+        mIcon.setVisibility(INVISIBLE);
+        mIcon.setImageResource(icon);
+        mIcon.setLayoutParams(params);
+
+        // mIcon.setColorFilter(ContextCompat.getColor(context, R.color.tab_unselect));
+        LayoutParams textViewParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        textViewParams.gravity = Gravity.CENTER_HORIZONTAL;
+//         textViewParams.addRule(ALIGN_PARENT_BOTTOM);
+        textViewParams.topMargin = ContextUtils.dip2px(context, 0.5f);
         textViewParams.bottomMargin = ContextUtils.dip2px(context, 2.5f);
+        mTextView = new TextView(context);
         mTextView.setText(title);
-        mTextView.setGravity(Gravity.END);
         mTextView.setTextSize(ContextUtils.dip2px(context, 3.2f));
         mTextView.setLayoutParams(textViewParams);
-        mTextView.setTextColor(ContextCompat.getColor(mContext, R.color.tab_unselect));
+        addView(mIcon);
         addView(mTextView);
     }
 

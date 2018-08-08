@@ -15,6 +15,7 @@ import com.trello.rxlifecycle2.LifecycleTransformer
 
 import javax.inject.Inject
 
+
 /**
  * desc :
  * author: Will .

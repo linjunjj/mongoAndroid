@@ -50,8 +50,8 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
             mFragments[4] = findFragment(PersonalFragment::class.java)
         }
         mBootomBar.addItem(BottomBarTab(this, R.drawable.home,R.drawable.press_home ,"首页"),0)
-        mBootomBar.addItem(BottomBarTab(this, R.drawable.find,R.drawable.press_find, "发现"),1)
-        mBootomBar.addCenterItem(BottomBarCenterTab(this,0,null))
+        mBootomBar.addItem(BottomBarTab(this, R.drawable.find,R.drawable.press_find, "动态"),1)
+        mBootomBar.addCenterItem(BottomBarCenterTab(this,0,"发布"))
         mBootomBar.addItem(BottomBarTab(this, R.drawable.message,R.drawable.press_message, "消息"),3)
         mBootomBar.addItem(BottomBarTab(this, R.drawable.me,R.drawable.press_me, "我的"),4)
         mPopMenu = PopMenu.Builder().attachToActivity(this@MainActivity)
