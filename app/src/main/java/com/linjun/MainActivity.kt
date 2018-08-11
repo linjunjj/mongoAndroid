@@ -1,6 +1,7 @@
 package com.linjun
 
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
 import com.linjun.component.ApplicationComponent
@@ -100,7 +101,19 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
 
     }
 
-
+    private var mExitTime: Long = 0
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (System.currentTimeMillis().minus(mExitTime) <= 2000) {
+                finish()
+            } else {
+                mExitTime = System.currentTimeMillis()
+                showToast("再按一次退出程序")
+            }
+            return true
+        }
+        return super.onKeyDown(keyCode, event)
+    }
 
     override fun onBackPressedSupport() {
         if (JCVideoPlayer.backPress()){

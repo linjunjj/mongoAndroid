@@ -6,14 +6,12 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.request.RequestOptions
 import com.linjun.R
 import com.linjun.component.ApplicationComponent
 import com.linjun.ui.base.BaseContract
 import com.linjun.ui.base.BaseFragment
 import com.linjun.ui.base.BasePresenter
-import com.linjun.utils.ImageLoaderUtil
+import com.linjun.ui.login.LoginActivity
 import com.linjun.widget.SimpleMultiStateView
 import kotlinx.android.synthetic.main.fragment_personal.*
 
@@ -35,7 +33,9 @@ class PersonalFragment : BaseFragment<BasePresenter<BaseContract.BaseView>>() {
     override fun initData() {}
 
     override fun bindView(view: View, savedInstanceState: Bundle?) {
-
+        my_collect.setOnClickListener{
+         LoginActivity.launch(this.activity,0)
+        }
     }
 
 }
