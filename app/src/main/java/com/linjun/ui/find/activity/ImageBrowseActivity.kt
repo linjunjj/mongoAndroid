@@ -9,7 +9,7 @@ import com.linjun.R
 import com.linjun.component.ApplicationComponent
 import com.linjun.ui.base.BaseContract
 import com.linjun.ui.base.BaseImageDrowseActivity
-import com.linjun.utils.StatusBarUtil
+//import com.linjun.utils.StatusBarUtil
 import com.linjun.widget.SimpleMultiStateView
 import kotlinx.android.synthetic.main.activity_image_browse.*
 
@@ -43,7 +43,7 @@ class ImageBrowseActivity : BaseImageDrowseActivity<BaseContract.BasePresenter>(
     override fun initInjector(appComponent: ApplicationComponent) {}
 
     override fun bindView(view: View, savedInstanceState: Bundle?) {
-        StatusBarUtil.setColor(this, ContextCompat.getColor(this, android.R.color.black))
+//        StatusBarUtil.setColor(this, ContextCompat.getColor(this, android.R.color.black))
         initView(rl_ImageBrowse, swipeLayout, viewPager)
     }
 

@@ -11,7 +11,6 @@ import com.linjun.ui.base.BaseActivity
 import com.linjun.ui.base.BaseContract
 import com.linjun.utils.StatusBarUtil
 import com.linjun.widget.SimpleMultiStateView
-import java.io.Serializable
 
 class LoginActivity:BaseActivity<BaseContract.BasePresenter>(){
 
@@ -30,7 +29,7 @@ class LoginActivity:BaseActivity<BaseContract.BasePresenter>(){
     }
 
     override fun bindView(view: View, savedInstanceState: Bundle?) {
-        StatusBarUtil.setColor(this, ContextCompat.getColor(this, android.R.color.black))
+        StatusBarUtil.setColor(this, ContextCompat.getColor(this, android.R.color.white))
     }
 
     override fun initData() {}

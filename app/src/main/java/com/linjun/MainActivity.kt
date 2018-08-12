@@ -1,6 +1,7 @@
 package com.linjun
 
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
@@ -13,7 +14,7 @@ import com.linjun.ui.find.FindFragment
 import com.linjun.ui.home.HomeFragment
 import com.linjun.ui.home.fragment.HomeRecommendFragment
 import com.linjun.ui.personal.PersonalFragment
-import com.linjun.utils.StatusBarUtil
+//import com.linjun.utils.StatusBarUtil
 import com.linjun.widget.BottomBar
 import com.linjun.widget.BottomBarCenterTab
 import com.linjun.widget.BottomBarTab
@@ -32,7 +33,9 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
     override fun initInjector(appComponent: ApplicationComponent) {}
 
     override fun bindView(view: View, savedInstanceState: Bundle?) {
-        StatusBarUtil.setTranslucentForImageViewInFragment(this@MainActivity, 0, null)
+//        StatusBarUtil.setTranslucentForImageViewInFragment(this@MainActivity, 5, null)
+//        StatusBarUtil.setColor(this, ContextCompat.getColor(this, android.R.color.black))
+
         if (savedInstanceState==null){
            mFragments[0]=HomeFragment.newInstance()
             mFragments[1]=FindFragment.newInstance()
@@ -89,6 +92,7 @@ class MainActivity : BaseActivity<BaseContract.BasePresenter>() {
         })
 
     }
+
 
 
     fun onClickPublish(v: View) {

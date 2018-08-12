@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import com.linjun.R
+import com.linjun.R.id.toolbar
+//import com.linjun.StatusBarUtil
 import com.linjun.component.ApplicationComponent
 import com.linjun.ui.base.BaseContract
 import com.linjun.ui.base.BaseFragment
@@ -33,6 +35,9 @@ class PersonalFragment : BaseFragment<BasePresenter<BaseContract.BaseView>>() {
     override fun initData() {}
 
     override fun bindView(view: View, savedInstanceState: Bundle?) {
+
+//                StatusBarUtil.darkMode(activity)
+//        StatusBarUtil.setPaddingSmart(activity, toolbar)
         my_collect.setOnClickListener{
          LoginActivity.launch(this.activity,0)
         }

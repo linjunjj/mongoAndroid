@@ -17,7 +17,7 @@ import pl.droidsonroids.gif.GifDrawable
 import java.util.concurrent.TimeUnit
 import com.linjun.widget.shimmer.Shimmer
 import com.linjun.widget.shimmer.ShimmerTextView
-
+import android.view.WindowManager
 
 
 class WelcomeActivity : BaseActivity<BaseContract.BasePresenter>() {
@@ -54,6 +54,13 @@ class WelcomeActivity : BaseActivity<BaseContract.BasePresenter>() {
         shimmer = Shimmer()
         shimmer!!.start(tv_logo)
         fl_ad.setOnClickListener { toMain() }
+        setFullScreen()
+    }
+
+    private fun setFullScreen() {
+        val flag = WindowManager.LayoutParams.FLAG_FULLSCREEN
+        val window = this@WelcomeActivity.getWindow()
+        window.setFlags(flag, flag)
     }
 
     /**

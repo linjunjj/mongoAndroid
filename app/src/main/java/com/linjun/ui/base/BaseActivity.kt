@@ -10,7 +10,7 @@ import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper
 import com.linjun.MyApp
 import com.linjun.R
 import com.linjun.ui.listener.IBase
-import com.linjun.utils.StatusBarUtil
+//import com.linjun.utils.StatusBarUtil
 import com.linjun.utils.toast
 import com.linjun.widget.SimpleMultiStateView
 import com.trello.rxlifecycle2.LifecycleTransformer
@@ -95,20 +95,20 @@ abstract class BaseActivity<T : BaseContract.BasePresenter> : SupportActivity(),
      * 设置状态栏颜色
      *
      * @param color
-     */
-    protected fun setStatusBarColor(@ColorInt color: Int) {
-        setStatusBarColor(color, StatusBarUtil.DEFAULT_STATUS_BAR_ALPHA)
-    }
-
-    /**
-     * 设置状态栏颜色
-     *
-     * @param color
-     * @param statusBarAlpha 透明度
-     */
-    fun setStatusBarColor(@ColorInt color: Int, @IntRange(from = 0, to = 255) statusBarAlpha: Int) {
-        StatusBarUtil.setColorForSwipeBack(this, color, statusBarAlpha)
-    }
+//     */
+//    protected fun setStatusBarColor(@ColorInt color: Int) {
+//        setStatusBarColor(color, StatusBarUtil.DEFAULT_STATUS_BAR_ALPHA)
+//    }
+//
+//    /**
+//     * 设置状态栏颜色
+//     *
+//     * @param color
+//     * @param statusBarAlpha 透明度
+//     */
+//    fun setStatusBarColor(@ColorInt color: Int, @IntRange(from = 0, to = 255) statusBarAlpha: Int) {
+//        StatusBarUtil.setColorForSwipeBack(this, color, statusBarAlpha)
+//    }
 
     /**
      * 显示加载页面
