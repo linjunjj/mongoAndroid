@@ -51,13 +51,8 @@ class PersonalFragment : BaseFragment<BasePresenter<BaseContract.BaseView>>(),Vi
 //    实现点击逻辑功能
 override fun onClick(v: View?) {
     when{
-        v?.id==R.id.edit_pelpeo ->{
-            showToast("收藏")
-        }
-        v?.id==R.id.my_collect ->{
-          LoginActivity.launch(this.activity,0)}
-
-
+        v?.id==R.id.edit_pelpeo ->{ showToast("收藏") }
+        v?.id==R.id.my_collect ->{ LoginActivity.launch(this.activity,0)}
 
     }
 }
