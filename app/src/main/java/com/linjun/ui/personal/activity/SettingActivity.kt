@@ -12,11 +12,13 @@ import com.linjun.ui.base.BaseContract
 import com.linjun.utils.StatusBarUtil
 import com.linjun.widget.SimpleMultiStateView
 
-class EditPersonActivity: BaseActivity<BaseContract.BasePresenter>(){
+
+
+class SettingActivity: BaseActivity<BaseContract.BasePresenter>(){
 
     companion object {
         fun launch(context: Activity, selectedIndex: Int){
-            val intent = Intent(context, EditPersonActivity::class.java)
+            val intent = Intent(context, SettingActivity::class.java)
             intent.putExtra("selectedIndex", selectedIndex)
             context.startActivity(intent)
             context.overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
@@ -34,7 +36,7 @@ class EditPersonActivity: BaseActivity<BaseContract.BasePresenter>(){
 
     override fun initData() {}
 
-    override fun getContentLayout(): Int = R.layout.activity_editing
+    override fun getContentLayout(): Int = R.layout.activity_setting
 
 
 }
