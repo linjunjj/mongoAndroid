@@ -42,6 +42,9 @@ abstract class BaseActivity<T : BaseContract.BasePresenter> : SupportActivity(),
         initData()
     }
 
+    override fun onBackPressed() {
+       this.finish()
+    }
     /**
      * 绑定 Presenter
      */

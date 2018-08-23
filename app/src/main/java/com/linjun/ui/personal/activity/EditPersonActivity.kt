@@ -11,8 +11,9 @@ import com.linjun.ui.base.BaseActivity
 import com.linjun.ui.base.BaseContract
 import com.linjun.utils.StatusBarUtil
 import com.linjun.widget.SimpleMultiStateView
+import kotlinx.android.synthetic.main.activity_editing.*
 
-class EditPersonActivity: BaseActivity<BaseContract.BasePresenter>(){
+class EditPersonActivity: BaseActivity<BaseContract.BasePresenter>(),View.OnClickListener{
 
     companion object {
         fun launch(context: Activity, selectedIndex: Int){
@@ -30,11 +31,19 @@ class EditPersonActivity: BaseActivity<BaseContract.BasePresenter>(){
 
     override fun bindView(view: View, savedInstanceState: Bundle?) {
         StatusBarUtil.setColor(this, ContextCompat.getColor(this, android.R.color.white))
+        img_back.setOnClickListener(this)
+
     }
 
     override fun initData() {}
 
     override fun getContentLayout(): Int = R.layout.activity_editing
+    override fun onClick(v: View?) {
+        when{
+            v?.id==R.id.img_back ->{this.finish()}
+        }
+     }
+
 
 
 }

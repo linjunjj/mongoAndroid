@@ -54,6 +54,8 @@
         </activity>
        <activity android:name=".ui.find.activity.ImageBrowseActivity"></activity>
         <activity android:name=".ui.login.LoginActivity"></activity>
+        <activity android:name=".ui.personal.activity.EditPersonActivity"></activity>
+        <activity android:name=".ui.personal.activity.SettingActivity"></activity>
         <activity
             android:windowSoftInputMode="stateAlwaysHidden"
             android:name=".MainActivity"

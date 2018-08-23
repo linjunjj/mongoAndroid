@@ -14,7 +14,7 @@ import com.linjun.widget.SimpleMultiStateView
 
 
 
-class SettingActivity: BaseActivity<BaseContract.BasePresenter>(){
+class SettingActivity: BaseActivity<BaseContract.BasePresenter>(),View.OnClickListener{
 
     companion object {
         fun launch(context: Activity, selectedIndex: Int){
@@ -38,5 +38,9 @@ class SettingActivity: BaseActivity<BaseContract.BasePresenter>(){
 
     override fun getContentLayout(): Int = R.layout.activity_setting
 
-
+    override fun onClick(v: View?) {
+        when{
+            v?.id==R.id.img_back ->{this.finish()}
+        }
+    }
 }

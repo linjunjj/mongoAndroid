@@ -47,7 +47,7 @@ class PersonalFragment : BaseFragment<BasePresenter<BaseContract.BaseView>>(),Vi
 //         LoginActivity.launch(this.activity,0)
         my_collect.setOnClickListener(this)
         edit_pelpeo.setOnClickListener(this)
-
+        my_setting.setOnClickListener(this)
         }
 
 //    实现点击逻辑功能
