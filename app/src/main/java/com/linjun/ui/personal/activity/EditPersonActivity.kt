@@ -32,7 +32,6 @@ class EditPersonActivity: BaseActivity<BaseContract.BasePresenter>(),View.OnClic
     override fun bindView(view: View, savedInstanceState: Bundle?) {
         StatusBarUtil.setColor(this, ContextCompat.getColor(this, android.R.color.white))
         img_back.setOnClickListener(this)
-
     }
 
     override fun initData() {}
