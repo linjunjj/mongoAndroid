@@ -1,4 +1,4 @@
-package com.linjun.ui.personal.activity
+package com.linjun.ui.personal.activity.setting
 
 import android.app.Activity
 import android.content.Intent
@@ -9,19 +9,15 @@ import com.linjun.R
 import com.linjun.component.ApplicationComponent
 import com.linjun.ui.base.BaseActivity
 import com.linjun.ui.base.BaseContract
-import com.linjun.ui.personal.activity.setting.ChangePasswordActivity
-import com.linjun.ui.personal.activity.setting.IdentityActivity
-import com.linjun.ui.personal.activity.setting.SuggestActivity
 import com.linjun.utils.StatusBarUtil
 import com.linjun.widget.SimpleMultiStateView
-import kotlinx.android.synthetic.main.activity_setting.*
+import kotlinx.android.synthetic.main.activity_identity.*
 
-
-class SettingActivity: BaseActivity<BaseContract.BasePresenter>(),View.OnClickListener{
+class IdentityActivity: BaseActivity<BaseContract.BasePresenter>(), View.OnClickListener{
 
     companion object {
         fun launch(context: Activity, selectedIndex: Int){
-            val intent = Intent(context, SettingActivity::class.java)
+            val intent = Intent(context, IdentityActivity::class.java)
             intent.putExtra("selectedIndex", selectedIndex)
             context.startActivity(intent)
             context.overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
@@ -34,31 +30,21 @@ class SettingActivity: BaseActivity<BaseContract.BasePresenter>(),View.OnClickLi
     }
 
     override fun bindView(view: View, savedInstanceState: Bundle?) {
-
         StatusBarUtil.setColor(this, ContextCompat.getColor(this, android.R.color.white))
         img_back.setOnClickListener(this)
-        txt_ident.setOnClickListener(this)
-        txt_changePassword.setOnClickListener(this)
-        txt_feedback.setOnClickListener(this)
+        identy.setFixedText("身份证号:")
+        name.setFixedText("真实姓名:")
     }
 
     override fun initData() {}
 
-    override fun getContentLayout(): Int = R.layout.activity_setting
-
+    override fun getContentLayout(): Int = R.layout.activity_identity
     override fun onClick(v: View?) {
         when{
-            v?.id==R.id.img_back ->{this.finish()}
-            v?.id==R.id.txt_ident ->{
-                IdentityActivity.launch(this,0) }
-            v?.id==R.id.txt_changePassword ->{
-                ChangePasswordActivity.launch(this,0)
-            }
-            v?.id==R.id.txt_feedback ->{
-                SuggestActivity.launch(this,0)
-            }
-            }
-
+            v?.id== R.id.img_back ->{this.finish()}
         }
+    }
+
+
 
 }
