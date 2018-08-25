@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import com.linjun.R
-import com.linjun.R.id.toolbar
 //import com.linjun.StatusBarUtil
 import com.linjun.component.ApplicationComponent
 import com.linjun.showToast

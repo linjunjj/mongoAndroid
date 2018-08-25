@@ -9,6 +9,7 @@ import com.linjun.R
 import com.linjun.component.ApplicationComponent
 import com.linjun.ui.base.BaseActivity
 import com.linjun.ui.base.BaseContract
+import com.linjun.ui.personal.activity.setting.AboutActivity
 import com.linjun.ui.personal.activity.setting.ChangePasswordActivity
 import com.linjun.ui.personal.activity.setting.IdentityActivity
 import com.linjun.ui.personal.activity.setting.SuggestActivity
@@ -40,6 +41,7 @@ class SettingActivity: BaseActivity<BaseContract.BasePresenter>(),View.OnClickLi
         txt_ident.setOnClickListener(this)
         txt_changePassword.setOnClickListener(this)
         txt_feedback.setOnClickListener(this)
+        txt_about.setOnClickListener(this)
     }
 
     override fun initData() {}
@@ -57,6 +59,10 @@ class SettingActivity: BaseActivity<BaseContract.BasePresenter>(),View.OnClickLi
             v?.id==R.id.txt_feedback ->{
                 SuggestActivity.launch(this,0)
             }
+            v?.id==R.id.txt_about ->{
+                AboutActivity.launch(this,0)
+            }
+
             }
 
         }

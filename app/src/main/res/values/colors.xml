@@ -28,5 +28,6 @@
     <color name="third_party_text_color">#999999</color>
       <color name="black">#ffeeee</color>
     <color name="tab_text_normal">#212121</color>
+    <color name="color_gray">#9a9a9a</color>
 
 </resources>
