@@ -26,7 +26,6 @@ class JdDetailBean {
     var comments: List<CommentsBean>? = null
 
     class CommentsBean :JdBaseBean(), MultiItemEntity {
-
         /**
          * comment_ID : 3519034
          * comment_post_ID : 26402

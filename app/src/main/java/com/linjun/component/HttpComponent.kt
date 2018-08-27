@@ -14,5 +14,4 @@ interface HttpComponent {
 //    fun inject(happlyFragment: HapplyFragment)
 //    fun  inject(jdDetailFragment: JdDetailFragment )
 fun inject(jdDetailFragment: JdDetailFragment)
-
 }
