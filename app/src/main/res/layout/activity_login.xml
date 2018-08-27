@@ -42,7 +42,7 @@
         android:paddingTop="16dp"
         android:paddingRight="20dp"
         android:paddingBottom="10dp"/>
-    <EditText
+    <com.linjun.widget.EditTextWithDeleteButton
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
         android:paddingTop="16dp"
         android:paddingRight="20dp"
         android:paddingBottom="10dp"/>
-    <EditText
+    <com.linjun.widget.EditTextWithDeleteButton
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

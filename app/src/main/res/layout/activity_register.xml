@@ -43,7 +43,7 @@
         android:background="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <EditText
+        <com.linjun.widget.EditTextWithDeleteButton
             android:hint="手机号码"
             android:id="@+id/user_tel"
             android:textSize="15sp"
